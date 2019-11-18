@@ -7,11 +7,11 @@ export default class LoginPage extends Component {
       <main role="main">
         <header role="banner">
           <h1>WatchDog</h1>
-          <h2>[Short app slogan]</h2>
+          <h2>The movies you love!</h2>
         </header>
         <section>
-        <LoginForm />
-      </section>
+          <LoginForm />
+        </section>
     </main>
     )
   }

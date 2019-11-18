@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 export default class NewUserForm extends Component {
   render() {
@@ -21,7 +22,9 @@ export default class NewUserForm extends Component {
           <input type="password" name='password' id='password' />
         </div>
         <button type='submit'>Sign Up</button>
-        <button type='submit'>Back</button>
+        <button type='submit'>
+          <Link to='/'>Back</Link>
+        </button>
       </form>
     )
   }

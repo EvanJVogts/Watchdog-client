@@ -36,7 +36,7 @@ class App extends Component {
               component={HomePage}
               />
             <Route
-              path={'/home/:userId/:movieId'}
+              path={'/home/:movieId'}
               component={ExpandedMoviePage}
               />
             <Route
