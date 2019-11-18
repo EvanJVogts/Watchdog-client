@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './NewMovieForm.css';
 
 export default class NewMovieForm extends Component {
   render() {

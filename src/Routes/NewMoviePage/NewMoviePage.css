@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans",
+  sans-serif;
+  font-size: 20px;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 1% 0;
+  background-color: #aaa;
+  height: 6vh;
+}
+
+header {
+  padding: 2vh;
+  height: 18vh;
+}
+
+section {
+  padding: 20px 25px;
+  background-color: #bbb;
+  margin: 0 1% 0 1%;
+}
+
+p {
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.form-section {
+  text-align: center;
+}
+
+
+.form-section {
+  display: block;
+}
+
+.favorite-label {
+  display: inline;
+}
+
+.favorite-checkbox {
+  display: inline;
+}
