@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css'
 
 export default class HomePage extends Component {
@@ -15,7 +16,9 @@ export default class HomePage extends Component {
       <section>
         <h2>All my movies:</h2>
         <p>[List of all movies logged]</p>
-        <button>Add new movie</button>
+        <button>
+          <Link to='/add'>Add new movie!</Link>
+        </button>
       </section>
     </main>
     )

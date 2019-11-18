@@ -11,7 +11,7 @@ export default class LandingPage extends Component {
           <h2>The movies you love!</h2>
         </header>
         <div>
-          <p>[App description]</p>
+          <p>An app to keep track of the movies you have seen, rate them, comment about them, and share your favorites with others.</p>
         </div>
         <div>
           <button>
