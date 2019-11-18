@@ -13,22 +13,16 @@ export default class LandingPage extends Component {
         <div>
           <p>An app to keep track of the movies you have seen, rate them, comment about them, and share your favorites with others.</p>
         </div>
-        <div>
-          <button>
-            <Link to='/login'>
-                Log in
-            </Link>
-          </button>
-          <button>
-            <Link to='/register'>
-                New User?
-            </Link>
-          </button>
-          <button>
-            <Link to='/home/:userId'>
-                Demo
-            </Link>
-          </button>
+        <div className='buttons'>
+          <Link to='/login' className='button'>
+              Log in
+          </Link>
+          <Link to='/register' className='button'>
+              New User?
+          </Link>
+          <Link to='/home/:userId' className='button'>
+              Demo
+          </Link>
         </div>
     </main>
     )

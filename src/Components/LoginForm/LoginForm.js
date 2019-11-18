@@ -14,9 +14,7 @@ export default class NewUserForm extends Component {
           <input type="password" name='password' id='password' required/>
         </div>
         <button type='submit'>Login</button>
-        <button type='submit'>
-          <Link to='/'>Back</Link>
-        </button>
+        <Link to='/'>Back</Link>
       </form>
     )
   }

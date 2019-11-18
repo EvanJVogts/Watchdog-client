@@ -16,9 +16,7 @@ export default class HomePage extends Component {
       <section>
         <h2>All my movies:</h2>
         <p>[List of all movies logged]</p>
-        <button>
-          <Link to='/add'>Add new movie!</Link>
-        </button>
+        <Link to='/add'>Add new movie!</Link>
       </section>
     </main>
     )

@@ -21,10 +21,8 @@ export default class NewUserForm extends Component {
           <label for="password">Password</label>
           <input type="password" name='password' id='password' />
         </div>
-        <button type='submit'>Sign Up</button>
-        <button type='submit'>
-          <Link to='/'>Back</Link>
-        </button>
+        <button type='submit'>Submit</button>
+        <Link to='/'>Back</Link>
       </form>
     )
   }

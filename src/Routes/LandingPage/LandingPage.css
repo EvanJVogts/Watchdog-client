@@ -1,0 +1,13 @@
+.buttons {
+  margin: 100px;
+}
+
+.button {
+  padding: 30px;
+  margin: 10px;
+  text-decoration: none;
+  color: blue;
+  border: 1px solid black;
+  border-radius: 5%;
+  background: rgb(206, 206, 206);
+}

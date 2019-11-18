@@ -30,9 +30,7 @@ export default class NewMovieForm extends Component {
         </div>
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>
-          <button>
-            <Link to='/home/:userId'>Back</Link>
-          </button>
+          <Link to='/home/:userId'>Back</Link>
       </form>
     )
   }
