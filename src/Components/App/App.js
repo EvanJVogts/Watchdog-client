@@ -8,7 +8,7 @@ import HomePage from '../../routes/HomePage/HomePage';
 import ExpandedMoviePage from '../../routes/ExpandedMoviePage/ExpandedMoviePage';
 import NewMoviePage from '../../routes/NewMoviePage/NewMoviePage';
 import MoviesContext from '../../contexts/MoviesContext';
-import config from '../../config';
+// import config from '../../config';
 import './App.css';
 
 class App extends Component {
@@ -67,6 +67,12 @@ class App extends Component {
         (movie.id !== updatedMovie.id) ? movie : updatedMovie)
     })
   }
+
+  setMovieList = (moviesList) => {
+      this.setState ({
+        movies: moviesList
+      })
+    }
 
   render() {
     const contextValue = {
