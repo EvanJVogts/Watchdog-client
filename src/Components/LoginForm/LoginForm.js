@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default class NewUserForm extends Component {
   render() {
     return (
-      <form class='signin-form'>
+      <form className='signin-form'>
         <div>
           <label htmlFor="username">Email</label>
           <input type="text" name='username' id='username' required/>

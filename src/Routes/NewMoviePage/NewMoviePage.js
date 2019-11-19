@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NewMovieForm from '../../Components/NewMovieForm/NewMovieForm';
+import NewMovieForm from '../../components/NewMovieForm/NewMovieForm';
 import './NewMoviePage.css';
 
 export default class NewMoviePage extends Component {

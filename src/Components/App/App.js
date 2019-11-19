@@ -8,7 +8,7 @@ import HomePage from '../../routes/HomePage/HomePage';
 import ExpandedMoviePage from '../../routes/ExpandedMoviePage/ExpandedMoviePage';
 import NewMoviePage from '../../routes/NewMoviePage/NewMoviePage';
 import MoviesContext from '../../contexts/MoviesContext';
-import config from '../config';
+import config from '../../config';
 import './App.css';
 
 class App extends Component {
@@ -39,26 +39,27 @@ class App extends Component {
       })
   }
 
-  componentDidMount() {
-    fetch(config.API_ENDPOINT, {
-      method: 'GET',
-      headers: {
-        'content-type': 'application/json',
-        'Authorization': `Bearer ${config.API_KEY}`
-      }
-    })
-    .then(response => {
-      if (!response.ok) {
-        return response.json().then(error => Promise.reject(error))
-      }
-      return response.json()
-    })
-    .then(this.setMovies)
-    .catch(error => {
-      console.error(error)
-      this.setState({ error })
-    })
-  }
+  // componentDidMount() {
+  //   fetch(config.API_ENDPOINT, {
+  //     method: 'GET',
+  //     headers: {
+  //       'content-type': 'application/json',
+  //       'Authorization': `Bearer dummy-api-token`
+  //       // 'Authorization': `Bearer ${config.API_KEY}`
+  //     }
+  //   })
+  //   .then(response => {
+  //     if (!response.ok) {
+  //       return response.json().then(error => Promise.reject(error))
+  //     }
+  //     return response.json()
+  //   })
+  //   .then(this.setMovies)
+  //   .catch(error => {
+  //     console.error(error)
+  //     this.setState({ error })
+  //   })
+  // }
 
   updateMovie = updatedMovie => {
     this.setState({
@@ -73,6 +74,7 @@ class App extends Component {
       addMovie: this.addMovie,
       deleteMovie: this.deleteMovie,
       updatedMovie: this.updateMovie,
+      setMovieList: this.setMovieList,
     }
     
     return (

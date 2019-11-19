@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MoviesContext from '../../contexts/MoviesContext';
-import config from '../../../config';
+import config from '../../config';
 import { Link } from 'react-router-dom';
 import './NewMovieForm.css';
 
@@ -10,7 +10,7 @@ export default class NewMovieForm extends Component {
   static propTypes = {
     history: PropTypes.shape({
       push: PropTypes.func,
-    }).isRequired,
+    }),
   };
 
   static contextType = MoviesContext;
@@ -71,11 +71,11 @@ export default class NewMovieForm extends Component {
             required>
           </input>
         </div>
-        <div class="form-section">
+        <div className="form-section">
           <label htmlFor="comments">Comments: </label>
           <textarea name="comments" rows="10"></textarea>
         </div>
-        <div class="form-section">
+        <div className="form-section">
           <label 
             htmlFor="rating">
               Movie rating: 
@@ -88,9 +88,9 @@ export default class NewMovieForm extends Component {
             <option>5 star</option>
           </select>
         </div>
-        <div class="form-section">
-          <label class="favorite-label" for="favorite">Favorite:</label>
-          <input type="checkbox" name="favorite" class="favorite-checkbox"></input>
+        <div className="form-section">
+          <label className="favorite-label" htmlFor="favorite">Favorite:</label>
+          <input type="checkbox" name="favorite" className="favorite-checkbox"></input>
         </div>
           <button type="submit">Submit</button>
           <button type="reset">Reset</button>

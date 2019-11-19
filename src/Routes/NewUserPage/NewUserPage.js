@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NewUserForm from '../../Components/NewUserForm/NewUserForm'
+import NewUserForm from '../../components/NewUserForm/NewUserForm'
 
 export default class NewUserPage extends Component {
   render() {

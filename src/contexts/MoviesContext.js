@@ -5,6 +5,7 @@ const MoviesContext = React.createContext({
   addMovie: () => {},
   deleteMovie: () => {},
   updateMovie: () => {},
+  setMovieList: () => {},
 })
 
 export default MoviesContext;
