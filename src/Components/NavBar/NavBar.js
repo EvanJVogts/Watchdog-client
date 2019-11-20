@@ -6,7 +6,7 @@ export default class NewMovieForm extends Component {
     return (
       <nav role="navigation">
         <span>
-          <h3>[WatchDog Logo]</h3>
+          <h4>[WatchDog Logo]</h4>
         </span>
       </nav>
     )

@@ -6,8 +6,8 @@ const MovieApiService = {
     console.log(TokenService.getAuthToken())
     return fetch(`${config.API_ENDPOINT}/movies`, {
       headers: {
-        // 'authorization': `bearer ${TokenService.getAuthToken()}`,
-        'authorization': `bearer dummy-api-token`,
+        // 'Authorization': `bearer ${TokenService.getAuthToken()}`,
+        'Authorization': `bearer dummy-api-token`,
       },
     })
       .then(res =>
@@ -20,7 +20,8 @@ const MovieApiService = {
     console.log(TokenService.getAuthToken());
     return fetch(`${config.API_ENDPOINT}/movies/${movieId}`, {
       headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
+        // 'authorization': `bearer ${TokenService.getAuthToken()}`,
+        'Authorization': `bearer dummy-api-token`
       },
     })
       .then(res =>
@@ -32,7 +33,9 @@ const MovieApiService = {
   getMovieComments(movieId) {
     return fetch(`${config.API_ENDPOINT}/movies/${movieId}/comments`, {
       headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`,
+        // 'authorization': `bearer ${TokenService.getAuthToken()}`,
+        'Authorization': `bearer dummy-api-token`
+
       },
     })
       .then(res =>

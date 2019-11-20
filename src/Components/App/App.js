@@ -8,6 +8,7 @@ import HomePage from '../../routes/HomePage/HomePage';
 import ExpandedMoviePage from '../../routes/ExpandedMoviePage/ExpandedMoviePage';
 import NewMoviePage from '../../routes/NewMoviePage/NewMoviePage';
 import MoviesContext from '../../contexts/MoviesContext';
+import { MovieProvider } from '../../contexts/SingleMovieContext'
 // import config from '../../config';
 import './App.css';
 
@@ -86,38 +87,40 @@ class App extends Component {
     return (
       <div className="App">
         <MoviesContext.Provider value={contextValue}>
+        <MovieProvider>
           <nav className="Nav_bar">
-            <NavBar />
-          </nav>
-          <main className="App_main">
-            <Switch>
-              <Route
-                exact
-                path={'/'}
-                component={LandingPage}
-                />
-              <Route
-                path={'/login'}
-                component={LoginPage}
-                />
-              <Route
-                path={'/register'}
-                component={NewUserPage}
-                />
-              <Route
-                path={'/home/:userId'}
-                component={HomePage}
-                />
-              <Route
-                path={'/home/:movieId'}
-                component={ExpandedMoviePage}
-                />
-              <Route
-                path={'/add'}
-                component={NewMoviePage}
-                />
-            </Switch>
-          </main>
+              <NavBar />
+            </nav>
+            <main className="App_main">
+              <Switch>
+                <Route
+                  exact
+                  path={'/'}
+                  component={LandingPage}
+                  />
+                <Route
+                  path={'/login'}
+                  component={LoginPage}
+                  />
+                <Route
+                  path={'/register'}
+                  component={NewUserPage}
+                  />
+                <Route
+                  path={'/home/:userId'}
+                  component={HomePage}
+                  />
+                <Route
+                  path={'/movie/:movieId'}
+                  component={ExpandedMoviePage}
+                  />
+                <Route
+                  path={'/add'}
+                  component={NewMoviePage}
+                  />
+              </Switch>
+            </main>
+            </MovieProvider>
         </MoviesContext.Provider>
       </div>
     );

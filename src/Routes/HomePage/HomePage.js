@@ -10,20 +10,19 @@ export default class HomePage extends Component {
   static contextType = MovieContext
 
   componentDidMount() {
-    console.log(this.context)
     MovieApiService.getMovies()
       .then((data) => {
-        console.log(data, 'hello movies')
+        // console.log(data, 'hello movies')
         this.context.setMovieList(data)
       })
       .catch(this.context.setError)
   }
 
   renderMovies() {
-    console.log(this.context)
-    console.log('rendering movies')
+    // console.log(this.context)
+    // console.log('rendering movies')
     const movieList = this.context.movies
-    console.log(movieList)
+    // console.log(movieList)
     return movieList.map(movie =>
       <MovieListItem
         key={movie.id}
@@ -39,12 +38,12 @@ export default class HomePage extends Component {
         <h1>Homepage</h1>
       </header>
       <section>
-        <h2>My Favorite Movies:</h2>
+        <h2>My Favorite Movies</h2>
         <p>[List of favorite movies]</p>
       </section>
       <section>
-        <h2>All my movies:</h2>
-        <ul>
+        <h2>All my movies</h2>
+        <ul className="movieList">
           {this.renderMovies()}
         </ul>
         <Link to='/add'>Add new movie!</Link>
