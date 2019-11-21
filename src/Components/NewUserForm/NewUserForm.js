@@ -1,27 +1,37 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import { Button, Input, Required } from '../Utility/Utility'
+import { Link } from 'react-router-dom';
+import { Button, Input, Required } from '../Utility/Utility';
+import AuthApiService from '../../services/auth-api-service';
 
 export default class NewUserForm extends Component {
   static defaultProps = {
     onRegistrationSuccess: () => {}
   }
 
-  state = {
-    error: null
-  }
+  state = { error: null }
 
-  handleSubmit = event => {
-    event.preventDefault()
-    const { first_name, last_name, email, user_name, password } = event.target
+  handleSubmit = e => {
+    e.preventDefault()
+    const { first_name, last_name, email, password } = e.target
+    this.setState({ error: null })
+    AuthApiService.postUser({
+      first_name: first_name.value,
+      last_name: last_name.value,
+      email: email.value,
+      password: password.value,
+    })
+      .then(user => {
+        first_name.value = ''
+        last_name.value = ''
+        email.value = ''
+        password.value = ''
+        this.props.onRegistrationSuccess()
+      })
+      .catch(res => {
+        this.setState({ error: res.error })
+      })
     console.log('New user form submitted')
-    console.log({ first_name, last_name, email, user_name, password })
-    first_name.value = ''
-    last_name.value = ''
-    email.value = ''
-    user_name.value = ''
-    password.value = ''
-    this.props.onRegistrationSuccess()
+    console.log({ first_name, last_name, email, password })
   }
 
   render() {
@@ -33,7 +43,7 @@ export default class NewUserForm extends Component {
       >
 
         <div role='alert'>
-          {error && <p className='red'>{error}</p>}
+          {error && <p className='red'>Something went wrong!</p>}
         </div>
 
         <div className='first_name'>
@@ -42,7 +52,7 @@ export default class NewUserForm extends Component {
           </label>
           <Input
             type="text" 
-            name='first-name' 
+            name='first_name' 
             id='NewUserForm_first_name' 
             required>
           </Input>
@@ -54,7 +64,7 @@ export default class NewUserForm extends Component {
           </label>
           <Input
             type="text" 
-            name='last-name' 
+            name='last_name' 
             id='NewUserForm_last_name' 
             required>
           </Input>
@@ -77,7 +87,7 @@ export default class NewUserForm extends Component {
             Password <Required />
           </label>
           <Input
-            type="text" 
+            type="password" 
             name='password' 
             id='NewUserForm_password' 
             required>

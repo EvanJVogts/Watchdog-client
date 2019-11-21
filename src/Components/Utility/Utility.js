@@ -8,12 +8,11 @@ export function Input ({ className, ...props }) {
 
 export function Required({ className, ...props }) {
   return (
-    <span className={['Required', className].join(' ')} {...props}>
-      &#42;
-    </span>
+    <span className={['Required', className].join(' ')} {...props}></span>
   )
 }
 
 export function Button({ className, ...props }) {
   return <button className={['Button', className].join(' ')} {...props} />
 }
+

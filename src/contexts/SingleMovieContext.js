@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MoviesContext from './MoviesContext';
+// import MoviesContext from './MoviesContext';
 
 export const nullMovie = {
   title: '',
