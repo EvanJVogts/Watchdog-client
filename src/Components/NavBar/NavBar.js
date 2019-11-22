@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import './NavBar.css';
 
-export default class NewMovieForm extends Component {
+export default class NavBar extends Component {
   render() {
     return (
       <nav role="navigation">
-        <span>
-          <h4>[WatchDog Logo]</h4>
-        </span>
+        <h4>
+          <Link to='/'>
+            [WatchDog Logo]
+          </Link>
+        </h4>
       </nav>
     )
   }

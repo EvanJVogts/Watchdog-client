@@ -18,7 +18,7 @@ export default class NewUserPage extends Component {
       <section className="NewUserPage">
         <h2>Sign Up!</h2>
         <NewUserForm 
-        onRegistrationSuccess={this.handleRegistrationSucess}
+          onRegistrationSuccess={this.handleRegistrationSucess}
         />
       </section>
     )

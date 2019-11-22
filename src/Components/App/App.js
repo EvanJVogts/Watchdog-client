@@ -7,38 +7,44 @@ import NewUserPage from '../../routes/NewUserPage/NewUserPage';
 import HomePage from '../../routes/HomePage/HomePage';
 import ExpandedMoviePage from '../../routes/ExpandedMoviePage/ExpandedMoviePage';
 import NewMoviePage from '../../routes/NewMoviePage/NewMoviePage';
-import MoviesContext from '../../contexts/MoviesContext';
-import { MovieProvider } from '../../contexts/SingleMovieContext'
+import PrivateRoute from '../Utility/PrivateRoute';
+import PublicOnlyRoute from '../Utility/PublicOnlyRoute'
+// import MoviesContext from '../../contexts/MoviesContext';
+// import { MovieProvider } from '../../contexts/SingleMovieContext'
 // import config from '../../config';
 import './App.css';
 
 class App extends Component {
   state = {
-    movies: [],
-    error: null,
+    hasError: false
   };
 
-  setMovies = movies => {
-    this.setState({
-      movies,
-      error: null,
-    })
+  static getDerivedStateFromError(error) {
+    console.error(error)
+    return { hasError: true }
   }
 
-  addMovie = movie => {
-    this.setState({
-      movies: [ ...this.state.movies, movie ],
-    })
-  }
+  // setMovies = movies => {
+  //   this.setState({
+  //     movies,
+  //     error: null,
+  //   })
+  // }
 
-  deleteMovie = movieId => {
-    const newMovies = this.state.movies.filter(movie =>
-      movie.id !== movieId
-      )
-      this.setState({
-        movies: newMovies
-      })
-  }
+  // addMovie = movie => {
+  //   this.setState({
+  //     movies: [ ...this.state.movies, movie ],
+  //   })
+  // }
+
+  // deleteMovie = movieId => {
+  //   const newMovies = this.state.movies.filter(movie =>
+  //     movie.id !== movieId
+  //     )
+  //     this.setState({
+  //       movies: newMovies
+  //     })
+  // }
 
   // componentDidMount() {
   //   fetch(config.API_ENDPOINT, {
@@ -62,32 +68,30 @@ class App extends Component {
   //   })
   // }
 
-  updateMovie = updatedMovie => {
-    this.setState({
-      movies: this.state.movies.map(movie =>
-        (movie.id !== updatedMovie.id) ? movie : updatedMovie)
-    })
-  }
+  // updateMovie = updatedMovie => {
+  //   this.setState({
+  //     movies: this.state.movies.map(movie =>
+  //       (movie.id !== updatedMovie.id) ? movie : updatedMovie)
+  //   })
+  // }
 
-  setMovieList = (moviesList) => {
-      this.setState ({
-        movies: moviesList
-      })
-    }
+  // setMovieList = (moviesList) => {
+  //     this.setState ({
+  //       movies: moviesList
+  //     })
+  //   }
 
   render() {
-    const contextValue = {
-      movies: this.state.movies,
-      addMovie: this.addMovie,
-      deleteMovie: this.deleteMovie,
-      updatedMovie: this.updateMovie,
-      setMovieList: this.setMovieList,
-    }
+    // const contextValue = {
+    //   movies: this.state.movies,
+    //   addMovie: this.addMovie,
+    //   deleteMovie: this.deleteMovie,
+    //   updatedMovie: this.updateMovie,
+    //   setMovieList: this.setMovieList,
+    // }
     
     return (
       <div className="App">
-        <MoviesContext.Provider value={contextValue}>
-        <MovieProvider>
           <nav className="Nav_bar">
               <NavBar />
             </nav>
@@ -98,30 +102,28 @@ class App extends Component {
                   path={'/'}
                   component={LandingPage}
                   />
-                <Route
+                <PublicOnlyRoute
                   path={'/login'}
                   component={LoginPage}
                   />
-                <Route
+                <PublicOnlyRoute
                   path={'/register'}
                   component={NewUserPage}
                   />
-                <Route
+                <PrivateRoute
                   path={'/home/:userId'}
                   component={HomePage}
                   />
-                <Route
+                <PrivateRoute
                   path={'/movie/:movieId'}
                   component={ExpandedMoviePage}
                   />
-                <Route
+                <PrivateRoute
                   path={'/add'}
                   component={NewMoviePage}
                   />
               </Switch>
             </main>
-            </MovieProvider>
-        </MoviesContext.Provider>
       </div>
     );
   }

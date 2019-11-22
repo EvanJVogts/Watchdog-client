@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SingleMovieContext from '../../contexts/SingleMovieContext';
 import MovieApiService from '../../services/movie-api-service';
+import { Link } from 'react-router-dom'
 import './ExpandedMoviePage.css'
 
 export default class ExpandedMoviePage extends Component {
@@ -44,6 +45,9 @@ export default class ExpandedMoviePage extends Component {
     return (
       <main role="main">
       <section>{this.renderMovie()}</section>
+      <Link to='/' className='button'>
+        Back
+      </Link>
       </main>
     )
   }
