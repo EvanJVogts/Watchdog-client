@@ -25,9 +25,10 @@ export default class NewUserForm extends Component {
         password.value = ''
         TokenService.saveAuthToken(res.authToken)
         this.props.onLoginSuccess()
+        console.log('successful login')
       })
       .catch(res => {
-        console.log(res, res.error)
+        // console.log(res, res.error)
         this.setState({ error: res.error })
       })
   }

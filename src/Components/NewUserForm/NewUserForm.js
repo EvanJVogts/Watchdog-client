@@ -31,7 +31,7 @@ export default class NewUserForm extends Component {
         this.setState({ error: res.error })
       })
     console.log('New user form submitted')
-    console.log({ first_name, last_name, email, password })
+    // console.log({ first_name, last_name, email, password })
   }
 
   render() {
@@ -43,7 +43,7 @@ export default class NewUserForm extends Component {
       >
 
         <div role='alert'>
-          {error && <p className='red'>Something went wrong!</p>}
+          {error && <p className='error'>Something went wrong!</p>}
         </div>
 
         <div className='first_name'>
