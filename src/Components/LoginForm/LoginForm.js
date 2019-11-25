@@ -3,6 +3,7 @@ import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
 import { Button, Input } from '../Utility/Utility';
 import { Link } from 'react-router-dom';
+import UserContext from '../../contexts/UserContext';
 import './LoginForm.css';
 
 export default class NewUserForm extends Component {
@@ -11,10 +12,14 @@ export default class NewUserForm extends Component {
   }
   state = { error: null }
 
+  static contextType = UserContext;
+
   handleSubmitJwtAuth = event => {
     event.preventDefault()
     this.setState({ error: null })
     const { email, password } = event.target
+
+    const userName = email.value
 
     AuthApiService.postLogin({
       email: email.value,
@@ -24,6 +29,7 @@ export default class NewUserForm extends Component {
         email.value = ''
         password.value = ''
         TokenService.saveAuthToken(res.authToken)
+        this.context.setLoggedIn(userName)
         this.props.onLoginSuccess()
         console.log('successful login')
       })
@@ -61,8 +67,14 @@ export default class NewUserForm extends Component {
             required>
           </Input>
         </div>
-        <Button type='submit'>Login</Button>
-        <Link to='/'>Back</Link>
+        <Button 
+          type='submit'>
+            Login
+        </Button>
+        <Link 
+          to='/'>
+            Back
+        </Link>
       </form>
     )
   }

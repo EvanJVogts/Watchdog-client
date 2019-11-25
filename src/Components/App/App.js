@@ -111,7 +111,7 @@ class App extends Component {
                   component={NewUserPage}
                   />
                 <PrivateRoute
-                  path={'/home/:userId'}
+                  path={'/home'}
                   component={HomePage}
                   />
                 <PrivateRoute

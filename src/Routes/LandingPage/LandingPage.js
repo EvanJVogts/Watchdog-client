@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
+import UserContext from '../../contexts/UserContext';
 import './LandingPage.css'
 
 export default class LandingPage extends Component {
@@ -10,11 +11,11 @@ export default class LandingPage extends Component {
   renderLogoutLink() {
     return(
       <div className='Landing_logged-in'>
-        <Link
-          onClick={this.handleLogoutClick}
-          to='/'>
-            Logout
-        </Link>
+        <section>
+          <Link to='/home'>
+            Homepage
+          </Link>
+        </section>
       </div>
     )
   }
@@ -36,15 +37,19 @@ export default class LandingPage extends Component {
   render() {
     return (
       <main role="main">
-        <header role="banner">
+        <header className='landing-title'>
           <h1>WatchDog</h1>
-          <h2>The movies you love!</h2>
         </header>
-        <div>
+        <div className='landing-slogan'>
+          <h2>
+              The movies you love!
+          </h2>
+        </div>
+        <div className='landing-description'>
           <p>An app to keep track of the movies you have seen, rate them, comment about them, and share your favorites with others.</p>
         </div>
-        <div className='buttons'>
-          {TokenService.hasAuthToken()
+        <div className='landing-buttons'>
+          {this.context.loggedIn
             ? this.renderLogoutLink()
             : this.renderLoginLink()}
         </div>

@@ -5,12 +5,15 @@ import App from './components/App/App';
 import './index.css';
 import { MovieListProvider } from './contexts/MoviesContext';
 import { MovieProvider } from './contexts/SingleMovieContext'
+import { UserContextProvider } from './contexts/UserContext';
 
 ReactDOM.render(
   <BrowserRouter>
     <MovieListProvider>
       <MovieProvider>
-        <App /> 
+        <UserContextProvider>
+          <App /> 
+        </UserContextProvider>
       </MovieProvider>
     </MovieListProvider>
   </BrowserRouter>, 

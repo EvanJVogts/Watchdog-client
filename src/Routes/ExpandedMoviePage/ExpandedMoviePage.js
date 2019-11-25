@@ -22,9 +22,9 @@ export default class ExpandedMoviePage extends Component {
       })
       .then(this.context.setMovie)
       .catch(this.context.setError)
-    MovieApiService.getMovieComments(movieId)
-      .then(this.context.setComments)
-      .then(this.context.setError)
+    // MovieApiService.getMovieComments(movieId)
+    //   .then(this.context.setComments)
+    //   .then(this.context.setError)
   }
 
   componentWillUnmount() {
@@ -45,7 +45,7 @@ export default class ExpandedMoviePage extends Component {
     return (
       <main role="main">
       <section>{this.renderMovie()}</section>
-      <Link to='/' className='button'>
+      <Link to='/home' className='button'>
         Back
       </Link>
       </main>

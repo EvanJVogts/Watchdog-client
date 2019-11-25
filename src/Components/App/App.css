@@ -13,13 +13,12 @@ body {
 
 header {
   padding: 10vh;
-  height: 48vh;
+  margin-bottom: 5vh;
 }
 
 section {
   padding: 30px 15px;
   background-color: #bbb;
-  height: 20vh;
   margin: 0 10% 0 10%;
 }
 
