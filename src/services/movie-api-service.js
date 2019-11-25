@@ -67,14 +67,9 @@ const MovieApiService = {
       )
   },
   deleteMovie(movieId) {
-    console.log(fetch)
-    console.log(TokenService.getAuthToken())
-    console.log(movieId)
-    console.log(config.API_ENDPOINT)
     return fetch(`${config.API_ENDPOINT}/movies/${movieId}`, {
       method: 'DELETE',
       headers: {
-        'Content-Type:': 'application/json',
         'Authorization': `Bearer ${TokenService.getAuthToken()}`,
       },
     })

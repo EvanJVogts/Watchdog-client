@@ -5,7 +5,7 @@ nav {
   right: 0;
   z-index: 10;
   padding: 1% 0;
-  background-color: #aaa;
+  background-color: #566F8F;
   height: 6vh;
 }
 
@@ -20,12 +20,34 @@ h4 {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 10px 20px 10px 10px;
+  margin: 12px 20px 10px 10px;
+  text-decoration: none;
+  color: #F5F5F5;
+}
+
+.nav-login-button:hover {
+  text-decoration: underline;
+}
+
+.nav-login-button:visited {
+  color: #F5F5F5;
+  text-decoration: none;
 }
 
 .nav-logout-button {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 10px 20px 10px 10px;
+  margin: 12px 20px 10px 10px;
+  text-decoration: none;
+  color: #F5F5F5;
+}
+
+.nav-logout-button:hover {
+  text-decoration: underline;
+}
+
+.nav-logout-button:visited {
+  color: #F5F5F5;
+  text-decoration: none;
 }

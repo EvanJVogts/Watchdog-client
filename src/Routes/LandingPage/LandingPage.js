@@ -26,13 +26,13 @@ export default class LandingPage extends Component {
   renderLoginLink() {
     return (
       <div className='Landing_logged-out'>
-        <Link to='/login' className='Button'>
+        <Link to='/login' className='Landing_Login_Button'>
           Log in
         </Link>
-        <Link to='/register' className='Button'>
+        <Link to='/register' className='Landing_Register_Button'>
           New User?
         </Link>
-        <Link to='/home/:userId' className='Button'>
+        <Link to='/home/:userId' className='Landing_Demo_Button'>
               Demo
         </Link>
       </div>
