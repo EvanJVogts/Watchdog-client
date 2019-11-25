@@ -9,9 +9,6 @@ import ExpandedMoviePage from '../../routes/ExpandedMoviePage/ExpandedMoviePage'
 import NewMoviePage from '../../routes/NewMoviePage/NewMoviePage';
 import PrivateRoute from '../Utility/PrivateRoute';
 import PublicOnlyRoute from '../Utility/PublicOnlyRoute'
-// import MoviesContext from '../../contexts/MoviesContext';
-// import { MovieProvider } from '../../contexts/SingleMovieContext'
-// import config from '../../config';
 import './App.css';
 
 class App extends Component {

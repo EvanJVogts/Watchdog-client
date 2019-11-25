@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
-import UserContext from '../../contexts/UserContext';
+import UsersContext from '../../contexts/UserContext';
 import './LandingPage.css'
 
 export default class LandingPage extends Component {
+
+  static contextType = UsersContext;
+
   handleLogoutClick = () => {
     TokenService.clearAuthToken()
+    this.context.setLoggedIn('')
   }
   renderLogoutLink() {
     return(

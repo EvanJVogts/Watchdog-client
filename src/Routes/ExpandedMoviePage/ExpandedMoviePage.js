@@ -17,14 +17,10 @@ export default class ExpandedMoviePage extends Component {
     this.context.clearError()
     MovieApiService.getMovie(movieId)
       .then(movie => {
-        console.log(movie, this.context)
         return movie
       })
       .then(this.context.setMovie)
       .catch(this.context.setError)
-    // MovieApiService.getMovieComments(movieId)
-    //   .then(this.context.setComments)
-    //   .then(this.context.setError)
   }
 
   componentWillUnmount() {
@@ -33,7 +29,6 @@ export default class ExpandedMoviePage extends Component {
 
   renderMovie() {
     const {movie} = this.context
-    console.log(movie)
     return <>
       <h2>{movie.title}</h2>
       <MovieRating rating={movie.rating} />
