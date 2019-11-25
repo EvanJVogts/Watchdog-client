@@ -7,7 +7,6 @@ h3 {
   margin: 40px;
   border: 1px solid black;
   padding: 20px;
-  background: grey;
 }
 
 ul {
@@ -38,4 +37,14 @@ h2 {
 
 .homepage_all_movie_section {
   background: #AFB7C2;
+  border: black 1px solid;
+}
+
+.all_movies_legend_title {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.all_movies_fieldset {
+  border-width:10px;
 }

@@ -14,7 +14,9 @@ body {
 
 header {
   padding: 10vh;
-  margin-bottom: 5vh;
+  margin-bottom: 4vh;
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 2px;
 }
 
 section {

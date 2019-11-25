@@ -1,4 +1,4 @@
-.Button {
+/* .Button {
   padding: 30px;
   margin: 10px;
   text-decoration: none;
@@ -6,62 +6,107 @@
   border: 1px solid black;
   border-radius: 5%;
   background: rgb(206, 206, 206);
-}
+} */
 
 .Landing_Login_Button {
   padding: 30px;
   margin: 10px;
   text-decoration: none;
-  color: blue;
-  border: 1px solid #566F8F;
+  color:#F5F5F5;
+  border: 1px solid #1961BF;
   border-radius: 5%;
-  background: #AFB7C2;
+  background: #566F8F;
 }
 
 .Landing_Register_Button {
   padding: 30px;
   margin: 10px;
   text-decoration: none;
-  color: blue;
-  border: 1px solid #566F8F;
+  color: #F5F5F5;
+  border: 1px solid #1961BF;
   border-radius: 5%;
-  background: #AFB7C2;
+  background: #566F8F;
 }
 
 .Landing_Demo_Button {
   padding: 30px;
   margin: 10px;
   text-decoration: none;
-  color: blue;
-  border: 1px solid #566F8F;
+  color: #F5F5F5;
+  border: 1px solid #1961BF;
   border-radius: 5%;
-  background: #AFB7C2;
-}
-
-.landing-title {
-  margin-bottom: 12vh;
-  margin-top: 10vh;
-}
-
-.landing-slogan {
-  margin-bottom: 2vh;
-  display: block;
-}
-
-.landing-description {
-  margin-bottom: 24vh;
-}
-
-.landing-buttons {
-  margin: 100px;
+  background: #566F8F;
 }
 
 .Landing_logged-in_Button {
   padding: 30px;
   margin: 10px;
   text-decoration: none;
-  color: blue;
-  border: 1px solid black;
+  color: #F5F5F5;
+  border: 1px solid #1961BF;
   border-radius: 5%;
-  background: rgb(206, 206, 206);
+  background: #566F8F;
 }
+
+.Landing_Login_Button:hover {
+  color: #DBBD93;
+  border-color: #D6973C;
+}
+
+.Landing_Register_Button:hover {
+  color: #DBBD93;
+  border-color: #D6973C;
+}
+
+.Landing_Demo_Button:hover {
+  color: #DBBD93;
+  border-color: #D6973C;
+}
+
+.Landing_logged-in_Button:hover {
+  color: #DBBD93;
+  border-color: #D6973C;
+}
+
+.Landing_Login_Button:visited {
+  text-decoration: none;
+}
+
+.Landing_Register_Button:visited {
+  text-decoration: none;
+}
+
+.Landing_Demo_Button:visited {
+  text-decoration: none;
+}
+
+.Landing_logged-in_Button:visited {
+  text-decoration: none;
+}
+
+.landing-title {
+  margin-bottom: 28vh;
+  margin-top: 0vh;
+  font-size: 300%;
+}
+
+.landing-slogan {
+  margin-bottom: 2vh;
+  display: block;
+  font-family: 'Gentium Book Basic', serif;
+  font-weight: bold;
+}
+
+.landing-description {
+  margin-bottom: 16vh;
+  margin-left: 18%;
+  margin-right: 18%;
+  font-family: 'Gentium Book Basic', serif;
+  color: #18100C;
+  font-size: 110%;
+}
+
+.landing-buttons {
+  margin: 100px;
+}
+

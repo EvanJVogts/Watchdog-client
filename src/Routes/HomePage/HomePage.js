@@ -36,12 +36,14 @@ export default class HomePage extends Component {
         <p>[List of favorite movies]</p>
       </section> */}
       <section className='homepage_all_movie_section'>
-        <div className=''>
-          <h2>All my movies</h2>
-        </div>
-        <ul className="movieList">
-          {this.renderMovies()}
-        </ul>
+        <fieldset className='all_movies_fieldset'>
+          <legend className='all_movies_legend'>
+            <h2 className='all_movies_legend_title'> All my movies </h2>
+          </legend>
+          <ul className="movieList">
+            {this.renderMovies()}
+          </ul>
+        </fieldset>
         <Link to='/add' className='add_new_movie_button'>Add new movie!</Link>
       </section>
     </main>

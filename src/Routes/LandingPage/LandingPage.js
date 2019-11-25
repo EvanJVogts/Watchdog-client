@@ -48,7 +48,7 @@ export default class LandingPage extends Component {
           </h2>
         </div>
         <div className='landing-description'>
-          <p>An app to keep track of the movies you have seen, rate them, comment about them, and share your favorites with others.</p>
+          <span>An app to keep track of the movies you have seen, rate them, comment about them, and share your favorites with others.</span>
         </div>
         <div className='landing-buttons'>
           {this.context.loggedIn || TokenService.hasAuthToken()

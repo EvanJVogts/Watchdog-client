@@ -9,13 +9,6 @@ nav {
   height: 6vh;
 }
 
-h4 {
-  margin: 0 0 0 10px;
-  padding: 0;
-  text-align: left;
-  font-size: 95%;
-}
-
 .nav-login-button {
   position: fixed;
   top: 0;
@@ -23,14 +16,14 @@ h4 {
   margin: 12px 20px 10px 10px;
   text-decoration: none;
   color: #F5F5F5;
+  font-variant: small-caps;
 }
 
 .nav-login-button:hover {
-  text-decoration: underline;
+  color: #DBBD93;
 }
 
 .nav-login-button:visited {
-  color: #F5F5F5;
   text-decoration: none;
 }
 
@@ -41,13 +34,21 @@ h4 {
   margin: 12px 20px 10px 10px;
   text-decoration: none;
   color: #F5F5F5;
+  font-variant: small-caps;
 }
 
 .nav-logout-button:hover {
-  text-decoration: underline;
+  color: #DBBD93;
 }
 
 .nav-logout-button:visited {
-  color: #F5F5F5;
   text-decoration: none;
+}
+
+.nav_bar_logo {
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 4px;
+  left: 8px;
 }
