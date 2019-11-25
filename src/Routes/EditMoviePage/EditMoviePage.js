@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SingleMovieContext from '../../contexts/SingleMovieContext';
+import MovieApiService from '../../services/movie-api-service'
 import { Button } from '../../components/Utility/Utility';
 import { Link } from 'react-router-dom'
 
@@ -10,6 +11,18 @@ export default class EditMoviePage extends Component {
   }
 
   static contextType = SingleMovieContext
+
+  handleSubmit = event => {
+    event.preventDefault()
+    const { newTitle, newRating, newComments } = event.target
+    MovieApiService.editMovie(newTitle.value, newComments.value, newRating.value)
+      .then(() => {
+        newTitle.value = ''
+        newComments.value = ''
+        newRating.value = ''
+      })
+      .catch(this.context.setError)
+  }
   
   renderEditMovie() {
     const {movie} = this.context
@@ -30,23 +43,6 @@ export default class EditMoviePage extends Component {
           </textarea>
         </div>
         <div>
-        <label
-          htmlFor='newRating'>
-            {movie.title}'s rating:  
-        </label>
-        <select 
-          type='number'
-          name='newRating'
-          id='newRating'
-          required>
-          <option value='1'>1 star</option>
-          <option value='2'>2 star</option>
-          <option value='3'>3 star</option>
-          <option value='4'>4 star</option>
-          <option value='5'>5 star</option>
-        </select>
-        </div>
-        <div>
           <label
             htmlFor='newComments'>
               Comments for {movie.title}:
@@ -58,6 +54,28 @@ export default class EditMoviePage extends Component {
             required>
           </textarea>
         </div>
+        <div>
+          <label
+            htmlFor='newRating'>
+              {movie.title}'s rating:  
+          </label>
+          <select 
+            type='number'
+            name='newRating'
+            id='newRating'
+            defaultValue={movie.rating}
+            required>
+            <option value='1'>1 star</option>
+            <option value='2'>2 star</option>
+            <option value='3'>3 star</option>
+            <option value='4'>4 star</option>
+            <option value='5'>5 star</option>
+          </select>
+        </div>
+        <Button type="submit">Submit</Button>
+        <Link to={`/movie/${movie.id}`} className='Button'>
+          Back
+        </Link>
       </form>
     </>
   }
@@ -66,12 +84,8 @@ export default class EditMoviePage extends Component {
     const { movie } = this.context
     return (
       <main>
-        <h1> Edit </h1>
+        <h1> Edit {movie.title}'s Information </h1>
         <section>{this.renderEditMovie()}</section>
-        <Button type="submit">Submit</Button>
-        <Link to={`/movie/${movie.id}`} className='Button'>
-          Back
-        </Link>
       </main>
     )
   }

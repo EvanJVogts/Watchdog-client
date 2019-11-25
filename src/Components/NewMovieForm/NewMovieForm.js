@@ -15,7 +15,7 @@ export default class NewMovieForm extends Component {
       .then(this.context.addNewMovie)
       .then(() => {
         title.value = ''
-        rating.value = []
+        rating.value = null
         comments.value = ''
       })
       .catch(this.context.setError)
@@ -74,7 +74,7 @@ export default class NewMovieForm extends Component {
         </div> */}
           <Button type="submit">Submit</Button>
           <Button type="reset">Reset</Button>
-          <Link to='/home/:userId'>Back</Link>
+          <Link to='/home' className='Button'>Back</Link>
       </form>
     )
   }

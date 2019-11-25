@@ -1,0 +1,26 @@
+.expanded_title {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.expanded_buttons {
+  margin-top: 10vh;
+  padding: 50px;
+}
+
+.expanded_render {
+  margin-top: 0vh;
+}
+
+.expanded_render_section {
+  margin: 90px;
+  padding: 50px;
+}
+
+.expanded_rating {
+  margin-top: 40px;
+}
+
+.expanded_comments {
+  padding: 50px;
+}

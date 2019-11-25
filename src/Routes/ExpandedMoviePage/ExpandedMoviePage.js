@@ -27,9 +27,12 @@ export default class ExpandedMoviePage extends Component {
   renderMovie() {
     const {movie} = this.context
     return <>
-      <h2>{movie.title}</h2>
+      <h2 className='expanded_title'>{movie.title}</h2>
+      <fieldset>
+        <legend>Comments:</legend>
+        <MovieComments comments={movie.comments} />
+      </fieldset>
       <MovieRating rating={movie.rating} />
-      <MovieComments comments={movie.comments} />
     </>
   }
 
@@ -37,13 +40,22 @@ export default class ExpandedMoviePage extends Component {
     const { movie } = this.context
     return (
       <main role="main">
-      <section>{this.renderMovie()}</section>
-      <Link to='/home' className='Button'>
-        Back
-      </Link>
-      <Link to={`/edit/${movie.id}`} className='Button'>
-        Edit
-      </Link>
+        <section className='expanded_render_section'>
+          <div className='expanded_render'>
+            {this.renderMovie()}
+          </div>
+          <div className='expanded_buttons'>
+            <Link to='/home' className='Button'>
+              Back
+            </Link>
+            <Link to={`/edit/${movie.id}`} className='Button'>
+              Edit
+            </Link>
+            <Link to={`/delete/${movie.id}`} className='Button'>
+              Delete
+            </Link>
+          </div>
+        </section>
       </main>
     )
   }
@@ -51,12 +63,12 @@ export default class ExpandedMoviePage extends Component {
 
 function MovieRating ({ rating }) {
   return (
-    <p>{rating}</p>
+    <p className='expanded_rating'>{rating} Stars</p>
   )
 }
 
 function MovieComments ({ comments }) {
   return (
-    <p>{comments}</p>
+    <p className='expanded_comments'>{comments}</p>
   )
 }

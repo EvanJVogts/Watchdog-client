@@ -26,7 +26,7 @@ const MovieApiService = {
           : res.json()
       )
   },
-  addNewMovie(title, rating, comments) {
+  addNewMovie(title, rating, comments, movieId) {
     return fetch(`${config.API_ENDPOINT}/movies`, {
       method: 'POST',
       headers: {
@@ -34,6 +34,7 @@ const MovieApiService = {
         'Authorization': `bearer ${TokenService.getAuthToken()}`,
       },
       body: JSON.stringify({
+        movieId: movieId,
         title: title,
         rating: rating,
         comments: comments,
@@ -44,7 +45,45 @@ const MovieApiService = {
         ? res.json().then(e => Promise.reject(e))
         : res.json()
     )
-  }
+  },
+  editMovie(newTitle, newComments, newRating, movieId) {
+    return fetch(`${config.API_ENDPOINT}/movies/${movieId}`, {
+      method: 'PATCH',
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+      body: JSON.stringify({
+        movieId: movieId,
+        title: newTitle,
+        rating: newRating,
+        comments: newComments,
+      }),
+    })
+    .then(res =>
+      (!res.ok)
+        ? res.json().then(e => Promise.reject(e))
+        : res.json()
+      )
+  },
+  deleteMovie(movieId) {
+    console.log(fetch)
+    console.log(TokenService.getAuthToken())
+    console.log(movieId)
+    console.log(config.API_ENDPOINT)
+    return fetch(`${config.API_ENDPOINT}/movies/${movieId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type:': 'application/json',
+        'Authorization': `Bearer ${TokenService.getAuthToken()}`,
+      },
+    })
+    .then(res =>
+      (!res.ok)
+        ? res.json().then(e => Promise.reject(e))
+        : res.json()
+      )
+  },
 }
 
 export default MovieApiService
