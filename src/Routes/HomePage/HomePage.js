@@ -14,30 +14,9 @@ export default class HomePage extends Component {
     MovieApiService.getMovies()
       .then(this.context.setMovieList)
       .catch(this.context.setError)
-      // .then((data) => {
-      //   // console.log(data, 'hello movies')
-      //   this.context.setMovieList(data)
-      // })
-      // .catch(this.context.setError)
   }
-
-  // renderMovies() {
-  //   // console.log(this.context)
-  //   // console.log('rendering movies')
-  //   const movieList = this.context.moviesList
-  //   // console.log(movieList)
-  //   return movieList.map(movie =>
-  //     <MovieListItem
-  //       key={movie.id}
-  //       movie={movie}
-  //       />
-  //   )
-  // }
     renderMovies() {
-    // console.log(this.context)
-    // console.log('rendering movies')
     const { movieList = [] } = this.context
-    // console.log(movieList)
     return movieList.map(movie =>
       <MovieListItem
         key={movie.id}

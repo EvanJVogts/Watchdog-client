@@ -21,72 +21,7 @@ class App extends Component {
     return { hasError: true }
   }
 
-  // setMovies = movies => {
-  //   this.setState({
-  //     movies,
-  //     error: null,
-  //   })
-  // }
-
-  // addMovie = movie => {
-  //   this.setState({
-  //     movies: [ ...this.state.movies, movie ],
-  //   })
-  // }
-
-  // deleteMovie = movieId => {
-  //   const newMovies = this.state.movies.filter(movie =>
-  //     movie.id !== movieId
-  //     )
-  //     this.setState({
-  //       movies: newMovies
-  //     })
-  // }
-
-  // componentDidMount() {
-  //   fetch(config.API_ENDPOINT, {
-  //     method: 'GET',
-  //     headers: {
-  //       'content-type': 'application/json',
-  //       'Authorization': `Bearer dummy-api-token`
-  //       // 'Authorization': `Bearer ${config.API_KEY}`
-  //     }
-  //   })
-  //   .then(response => {
-  //     if (!response.ok) {
-  //       return response.json().then(error => Promise.reject(error))
-  //     }
-  //     return response.json()
-  //   })
-  //   .then(this.setMovies)
-  //   .catch(error => {
-  //     console.error(error)
-  //     this.setState({ error })
-  //   })
-  // }
-
-  // updateMovie = updatedMovie => {
-  //   this.setState({
-  //     movies: this.state.movies.map(movie =>
-  //       (movie.id !== updatedMovie.id) ? movie : updatedMovie)
-  //   })
-  // }
-
-  // setMovieList = (moviesList) => {
-  //     this.setState ({
-  //       movies: moviesList
-  //     })
-  //   }
-
-  render() {
-    // const contextValue = {
-    //   movies: this.state.movies,
-    //   addMovie: this.addMovie,
-    //   deleteMovie: this.deleteMovie,
-    //   updatedMovie: this.updateMovie,
-    //   setMovieList: this.setMovieList,
-    // }
-    
+  render() {    
     return (
       <div className="App">
           <nav className="Nav_bar">

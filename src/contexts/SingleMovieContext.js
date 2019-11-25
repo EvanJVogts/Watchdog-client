@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import MoviesContext from './MoviesContext';
 
 export const nullMovie = {
   title: '',
@@ -13,9 +12,6 @@ const SingleMovieContext = React.createContext ({
   clearError: () => {},
   setMovie: () => {},
   clearMovie: () => {},
-  setComments: () => {},
-  setRating: () => {},
-  addComment: () => {},
 })
 
 export default SingleMovieContext;
@@ -39,24 +35,12 @@ export class MovieProvider extends Component {
     this.setState({ movie })
   }
 
-  setComments = comments => {
-    this.setState({ comments })
-  }
-
   setRating = rating => {
     this.setState({ rating })
   }
 
   clearMovie = () => {
     this.setMovie(nullMovie)
-    this.setComments([])
-  }
-
-  addComment = comment => {
-    this.setComments([
-      ...this.state.comments,
-      comment
-    ])
   }
 
   render() {
@@ -68,9 +52,7 @@ export class MovieProvider extends Component {
       setError: this.setError,
       clearError: this.clearError,
       setMovie: this.setMovie,
-      setComments: this.setComments,
       clearMovie: this.clearMovie,
-      addComment: this.addComment,
     }
     return (
       <SingleMovieContext.Provider value={value}>

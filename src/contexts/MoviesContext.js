@@ -5,7 +5,6 @@ const MoviesContext = React.createContext({
   error: null,
   setError: () => {},
   clearError: () => {},
-  // setMovieList: () => {},
   setMovieList: (moviesList) => {
     this.movies = moviesList;
   },
