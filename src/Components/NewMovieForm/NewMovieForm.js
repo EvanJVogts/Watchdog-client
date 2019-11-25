@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SingleMovieContext from '../../contexts/SingleMovieContext';
 import MovieApiService from '../../services/movie-api-service';
-// import config from '../../config';
 import { Link } from 'react-router-dom';
 import { Button } from '../Utility/Utility';
 import './NewMovieForm.css';

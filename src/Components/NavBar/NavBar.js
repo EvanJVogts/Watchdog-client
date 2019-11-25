@@ -40,7 +40,7 @@ export default class NavBar extends Component {
             [WatchDog Logo]
           </Link>
         </h4>
-        {this.context.loggedIn
+        {this.context.loggedIn || TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}
       </nav>

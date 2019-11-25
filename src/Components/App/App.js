@@ -7,6 +7,7 @@ import NewUserPage from '../../routes/NewUserPage/NewUserPage';
 import HomePage from '../../routes/HomePage/HomePage';
 import ExpandedMoviePage from '../../routes/ExpandedMoviePage/ExpandedMoviePage';
 import NewMoviePage from '../../routes/NewMoviePage/NewMoviePage';
+import EditMoviePage from '../../routes/EditMoviePage/EditMoviePage';
 import PrivateRoute from '../Utility/PrivateRoute';
 import PublicOnlyRoute from '../Utility/PublicOnlyRoute'
 import './App.css';
@@ -53,6 +54,10 @@ class App extends Component {
                 <PrivateRoute
                   path={'/add'}
                   component={NewMoviePage}
+                  />
+                <PrivateRoute
+                  path={'/edit'}
+                  component={EditMoviePage}
                   />
               </Switch>
             </main>

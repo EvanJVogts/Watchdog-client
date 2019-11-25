@@ -37,16 +37,16 @@ export default class ExpandedMoviePage extends Component {
   }
 
   render() {
-    // const { movie } = this.props
+    const { movie } = this.context
     return (
       <main role="main">
       <section>{this.renderMovie()}</section>
       <Link to='/home' className='button'>
         Back
       </Link>
-      {/* <Link to={`/movie/${movie.id}/edit`} className='button'>
+      <Link to={`/edit/${movie.id}`} className='button'>
         Edit
-      </Link> */}
+      </Link>
       </main>
     )
   }
