@@ -7,9 +7,6 @@ import UserContext from '../../contexts/UserContext';
 import './LoginForm.css';
 
 export default class NewUserForm extends Component {
-  static defaultProps = {
-    onLoginSuccess: () => {}
-  }
   state = { error: null }
 
   static contextType = UserContext;
@@ -30,8 +27,7 @@ export default class NewUserForm extends Component {
         password.value = ''
         TokenService.saveAuthToken(res.authToken)
         this.context.setLoggedIn(userName)
-        this.props.onLoginSuccess()
-        console.log('successful login')
+        console.log('Login success!')
       })
       .catch(res => {
         this.setState({ error: res.error })

@@ -63,7 +63,7 @@ const MovieApiService = {
     .then(res =>
       (!res.ok)
         ? res.json().then(e => Promise.reject(e))
-        : res.json()
+        : ''
       )
   },
   deleteMovie(movieId) {
@@ -71,13 +71,16 @@ const MovieApiService = {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${TokenService.getAuthToken()}`,
-      },
+      }
     })
     .then(res =>
       (!res.ok)
         ? res.json().then(e => Promise.reject(e))
-        : res.json()
+        : ''
       )
+    .then(data => {
+      console.log({ data })
+    })
   },
 }
 

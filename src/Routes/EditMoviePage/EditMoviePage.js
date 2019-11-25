@@ -13,10 +13,12 @@ export default class EditMoviePage extends Component {
   static contextType = SingleMovieContext
 
   handleSubmit = event => {
+    const {movie} = this.context
     event.preventDefault()
     const { newTitle, newRating, newComments } = event.target
-    MovieApiService.editMovie(newTitle.value, newComments.value, newRating.value)
+    MovieApiService.editMovie(newTitle.value, newComments.value, newRating.value, movie.id)
       .then(() => {
+        movie.id = ''
         newTitle.value = ''
         newComments.value = ''
         newRating.value = ''
@@ -33,7 +35,7 @@ export default class EditMoviePage extends Component {
         <div>
           <label
             htmlFor='newTitle'>
-              {movie.title}'s title: 
+              Title: 
           </label>
           <textarea
             type='text'
@@ -45,7 +47,7 @@ export default class EditMoviePage extends Component {
         <div>
           <label
             htmlFor='newComments'>
-              Comments for {movie.title}:
+              Comments:
           </label>
           <textarea
             type='text'
@@ -57,7 +59,7 @@ export default class EditMoviePage extends Component {
         <div>
           <label
             htmlFor='newRating'>
-              {movie.title}'s rating:  
+              Rating:  
           </label>
           <select 
             type='number'

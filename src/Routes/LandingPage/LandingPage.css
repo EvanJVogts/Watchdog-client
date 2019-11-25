@@ -39,7 +39,7 @@
 }
 
 .landing-title {
-  margin-bottom: 10vh;
+  margin-bottom: 12vh;
   margin-top: 10vh;
 }
 
@@ -54,4 +54,14 @@
 
 .landing-buttons {
   margin: 100px;
+}
+
+.Landing_logged-in_Button {
+  padding: 30px;
+  margin: 10px;
+  text-decoration: none;
+  color: blue;
+  border: 1px solid black;
+  border-radius: 5%;
+  background: rgb(206, 206, 206);
 }

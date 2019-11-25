@@ -1,0 +1,12 @@
+.movieList {
+  color: #566F8F;
+  text-decoration: none;
+}
+
+.movieListItem {
+  background: #F5F5F5;
+}
+
+.movieListItem:hover {
+  text-decoration: underline;
+}

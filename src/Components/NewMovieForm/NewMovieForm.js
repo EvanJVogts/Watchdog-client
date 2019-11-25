@@ -6,6 +6,7 @@ import { Button } from '../Utility/Utility';
 import './NewMovieForm.css';
 
 export default class NewMovieForm extends Component {
+
   static contextType = SingleMovieContext;
 
   handleSubmit = event => {
@@ -72,7 +73,10 @@ export default class NewMovieForm extends Component {
           <label className='favorite-label' htmlFor='favorite'>Favorite:</label>
           <input type='checkbox' name='favorite' className='favorite-checkbox'></input>
         </div> */}
-          <Button type="submit">Submit</Button>
+          <Button 
+            type="submit">
+              Submit
+          </Button>
           <Button type="reset">Reset</Button>
           <Link to='/home' className='Button'>Back</Link>
       </form>

@@ -15,11 +15,9 @@ export default class LandingPage extends Component {
   renderLogoutLink() {
     return(
       <div className='Landing_logged-in'>
-        <section>
-          <Link to='/home' className='Button'>
-            Homepage
-          </Link>
-        </section>
+        <Link to='/home' className='Landing_logged-in_Button'>
+          Homepage
+        </Link>
       </div>
     )
   }

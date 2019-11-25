@@ -1,3 +1,7 @@
+h1 {
+  color: #F14938;
+}
+
 h3 {
   text-align: center;
   margin: 40px;
@@ -8,4 +12,30 @@ h3 {
 
 ul {
   padding: 0px;
+  margin-bottom: 100px;
+}
+
+.homepage_all_movie_section {
+  padding: 100px;
+
+}
+
+h2 {
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #F14938;
+}
+
+.add_new_movie_button {
+  padding: 30px;
+  margin: 10px;
+  text-decoration: none;
+  color: #F5F5F5;
+  border: 1px solid black;
+  border-radius: 5%;
+  background: rgb(206, 206, 206);
+}
+
+.homepage_all_movie_section {
+  background: #AFB7C2;
 }

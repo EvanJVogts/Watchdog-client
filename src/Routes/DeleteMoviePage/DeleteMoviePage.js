@@ -11,6 +11,10 @@ export default class EditMoviePage extends Component {
   }
 
   static contextType = SingleMovieContext
+
+  nextPath(path) {
+    this.props.history.push(path);
+  }
   
   renderDeleteMovie() {
     const {movie} = this.context
@@ -18,8 +22,8 @@ export default class EditMoviePage extends Component {
         <Button 
           className='Button'
           onClick={() => {
-            MovieApiService.deleteMovie(
-              movie.id)
+            MovieApiService.deleteMovie(movie.id)
+            .then(() => {this.nextPath('/home')}) 
           }}>
             Yes
         </Button>
