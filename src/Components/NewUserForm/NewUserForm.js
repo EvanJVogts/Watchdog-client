@@ -96,7 +96,7 @@ export default class NewUserForm extends Component {
 
         <Button type='submit'>Submit</Button>
 
-        <Link to='/'>Back</Link>
+        <Link to='/' className='Button'>Back</Link>
 
       </form>
     )

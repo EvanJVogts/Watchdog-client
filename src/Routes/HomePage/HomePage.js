@@ -40,7 +40,7 @@ export default class HomePage extends Component {
         <ul className="movieList">
           {this.renderMovies()}
         </ul>
-        <Link to='/add'>Add new movie!</Link>
+        <Link to='/add' className='Button'>Add new movie!</Link>
       </section>
     </main>
     )

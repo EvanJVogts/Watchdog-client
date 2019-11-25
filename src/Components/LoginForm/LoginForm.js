@@ -34,7 +34,6 @@ export default class NewUserForm extends Component {
         console.log('successful login')
       })
       .catch(res => {
-        // console.log(res, res.error)
         this.setState({ error: res.error })
       })
   }
@@ -72,7 +71,8 @@ export default class NewUserForm extends Component {
             Login
         </Button>
         <Link 
-          to='/'>
+          to='/'
+          className='Button'>
             Back
         </Link>
       </form>

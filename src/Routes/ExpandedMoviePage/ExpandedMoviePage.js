@@ -38,10 +38,10 @@ export default class ExpandedMoviePage extends Component {
     return (
       <main role="main">
       <section>{this.renderMovie()}</section>
-      <Link to='/home' className='button'>
+      <Link to='/home' className='Button'>
         Back
       </Link>
-      <Link to={`/edit/${movie.id}`} className='button'>
+      <Link to={`/edit/${movie.id}`} className='Button'>
         Edit
       </Link>
       </main>
