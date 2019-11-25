@@ -14,6 +14,7 @@ export default class ExpandedMoviePage extends Component {
 
   componentDidMount() {
     const { movieId } = this.props.match.params
+    this.context.clearMovie()
     this.context.clearError()
     MovieApiService.getMovie(movieId)
       .then(movie => {
@@ -21,10 +22,6 @@ export default class ExpandedMoviePage extends Component {
       })
       .then(this.context.setMovie)
       .catch(this.context.setError)
-  }
-
-  componentWillUnmount() {
-    this.context.clearMovie()
   }
 
   renderMovie() {
