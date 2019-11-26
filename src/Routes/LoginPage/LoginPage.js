@@ -6,11 +6,15 @@ export default class LoginPage extends Component {
   render() {
     return (
       <main>
-        <header>
+        <header className='login-title'>
           <h1>WatchDog</h1>
-          <h2>The movies you love!</h2>
         </header>
-        <section>
+        <div className='login-slogan'>
+          <h2>
+              The movies you love!
+          </h2>
+        </div>
+        <section className='login-form-section'>
           <LoginForm />
         </section>
     </main>

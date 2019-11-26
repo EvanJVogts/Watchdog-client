@@ -44,7 +44,7 @@ export default class NewUserForm extends Component {
         <div role='alert'>
           {error && <p className='error'>Something went wrong!</p>}
         </div>
-        <div className='email'>
+        <div className='login-email-input'>
           <label htmlFor="LoginForm_email">Email</label>
           <Input 
             type="text" 
@@ -63,12 +63,13 @@ export default class NewUserForm extends Component {
           </Input>
         </div>
         <Button 
-          type='submit'>
+          type='submit'
+          className='login-submit-button'>
             Login
         </Button>
         <Link 
           to='/'
-          className='Button'>
+          className='login-back-button'>
             Back
         </Link>
       </form>

@@ -1,3 +1,27 @@
 .error {
   color: red;
 }
+
+.login-email-input {
+  margin: 20px;
+}
+
+.login-submit-button {
+  padding: 30px;
+  margin: 10px;
+  text-decoration: none;
+  color: #F5F5F5;
+  border: 1px solid #1961BF;
+  border-radius: 5%;
+  background: #566F8F;
+}
+
+.login-back-button {
+  padding: 30px;
+  margin: 10px;
+  text-decoration: none;
+  color: #F5F5F5;
+  border: 1px solid #1961BF;
+  border-radius: 5%;
+  background: #566F8F;
+}
