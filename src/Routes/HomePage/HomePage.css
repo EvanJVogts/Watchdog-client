@@ -1,22 +1,20 @@
-h1 {
+.homepage_title {
   color: #F14938;
+  font-size: 200%;
+  padding-top: 60px;
+  margin-bottom: 80px;
+  text-shadow: 4px 4px #18100C;
 }
 
 h3 {
   text-align: center;
   margin: 40px;
-  border: 1px solid black;
   padding: 20px;
 }
 
 ul {
   padding: 0px;
   margin-bottom: 100px;
-}
-
-.homepage_all_movie_section {
-  padding: 100px;
-
 }
 
 h2 {
@@ -30,7 +28,7 @@ h2 {
   margin: 10px;
   text-decoration: none;
   color: #F5F5F5;
-  border: 1px solid #1961BF;
+  border: 2px solid #1961BF;
   border-radius: 5%;
   background: #566F8F;
   font-family: "Open Sans", sans-serif;
@@ -45,15 +43,20 @@ h2 {
 
 .homepage_all_movie_section {
   background: #AFB7C2;
-  border: black 1px solid;
+  border: #4B6373 1px solid;
+  box-shadow: 0px 0px 25px #4B6373;
+  padding: 80px;
+  margin: 0 10% 0 10%;
 }
 
 .all_movies_legend_title {
   margin-left: 16px;
   margin-right: 16px;
+  font-variant: small-caps;
 }
 
 .all_movies_fieldset {
   border-width:10px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
+  margin-bottom: 90px;
 }

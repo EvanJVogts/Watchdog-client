@@ -5,8 +5,11 @@
 
 .movieListItem {
   background: #F5F5F5;
+  border: 1px solid #4B6373;
 }
 
 .movieListItem:hover {
-  text-decoration: underline;
+  border: 1px solid #D6973C;
+  color: #D6973C;
+  box-shadow: 0px 0px 15px #4B6373;
 }

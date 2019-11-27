@@ -27,7 +27,6 @@ export default class NewUserForm extends Component {
         email.value = ''
         password.value = ''
         this.props.onRegistrationSuccess()
-        this.props.history.push('/home')
       })
       .catch(res => {
         this.setState({ error: res.error })

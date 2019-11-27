@@ -28,7 +28,7 @@ export default class HomePage extends Component {
   render() {
     return (
       <main role="main">
-      <header>
+      <header className='homepage_title'>
         <h1>Homepage</h1>
       </header>
       {/* <section>

@@ -1,6 +1,13 @@
 .NewUser-title {
-  margin-bottom: 28vh;
-  margin-top: 0vh;
+  margin-bottom: 20vh;
+  margin-top: 8vh;
   font-size: 300%;
-  text-shadow: 5px 5px 15px black;
+  text-shadow: 7px 7px #18100C;
+  color: #F14938;
+}
+
+.NewUserPage {
+  padding: 60px 80px 60px 80px;
+  background: #afb7c2;
+  margin: 0% 10% 10% 10%;
 }

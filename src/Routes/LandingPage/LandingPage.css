@@ -13,7 +13,7 @@
   margin: 10px;
   text-decoration: none;
   color:#F5F5F5;
-  border: 1px solid #1961BF;
+  border: 2px solid #1961BF;
   border-radius: 5%;
   background: #566F8F;
 }
@@ -23,7 +23,7 @@
   margin: 10px;
   text-decoration: none;
   color: #F5F5F5;
-  border: 1px solid #1961BF;
+  border: 2px solid #1961BF;
   border-radius: 5%;
   background: #566F8F;
 }
@@ -33,7 +33,7 @@
   margin: 10px;
   text-decoration: none;
   color: #F5F5F5;
-  border: 1px solid #1961BF;
+  border: 2px solid #1961BF;
   border-radius: 5%;
   background: #566F8F;
 }
@@ -43,7 +43,7 @@
   margin: 10px;
   text-decoration: none;
   color: #F5F5F5;
-  border: 1px solid #1961BF;
+  border: 2px solid #1961BF;
   border-radius: 5%;
   background: #566F8F;
 }
@@ -85,10 +85,11 @@
 }
 
 .landing-title {
-  margin-bottom: 28vh;
-  margin-top: 0vh;
+  margin-bottom: 26vh;
+  margin-top: 8vh;
   font-size: 300%;
-  text-shadow: 5px 5px 15px black;
+  text-shadow: 7px 7px #18100C;
+  color: #F14938;
 }
 
 .landing-slogan {
@@ -99,7 +100,7 @@
 }
 
 .landing-description {
-  margin-bottom: 16vh;
+  margin-bottom: 14vh;
   margin-left: 18%;
   margin-right: 18%;
   font-family: 'Gentium Book Basic', serif;
