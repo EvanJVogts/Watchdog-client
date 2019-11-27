@@ -28,8 +28,11 @@ export default class ExpandedMoviePage extends Component {
     const {movie} = this.context
     return <>
       <h2 className='expanded_title'>{movie.title}</h2>
-      <fieldset>
-        <legend>Comments:</legend>
+      <fieldset className='expanded_movies_fieldset'>
+        <legend
+          className='expanded_movies_legend_title'>
+            Comments:
+        </legend>
         <MovieComments comments={movie.comments} />
       </fieldset>
       <MovieRating rating={movie.rating} />
@@ -45,14 +48,17 @@ export default class ExpandedMoviePage extends Component {
             {this.renderMovie()}
           </div>
           <div className='expanded_buttons'>
-            <Link to='/home' className='Button'>
-              Back
+            <Link to='/home' 
+              className='expanded_movie_back_button'>
+                Back
             </Link>
-            <Link to={`/edit/${movie.id}`} className='Button'>
-              Edit
+            <Link to={`/edit/${movie.id}`} 
+              className='expanded_movie_edit_button'>
+                Edit
             </Link>
-            <Link to={`/delete/${movie.id}`} className='Button'>
-              Delete
+            <Link to={`/delete/${movie.id}`} 
+              className='expanded_movie_delete_button'>
+                Delete
             </Link>
           </div>
         </section>
