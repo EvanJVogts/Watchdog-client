@@ -13,12 +13,8 @@ p {
 }
 
 .form-section {
-  text-align: center;
-}
-
-
-.form-section {
   display: block;
+  text-align: center;
 }
 
 .favorite-label {

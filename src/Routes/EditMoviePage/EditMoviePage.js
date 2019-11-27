@@ -3,6 +3,7 @@ import SingleMovieContext from '../../contexts/SingleMovieContext';
 import MovieApiService from '../../services/movie-api-service'
 // import { Button } from '../../components/Utility/Utility';
 import { Link } from 'react-router-dom'
+import './EditMoviePage.css'
 
 export default class EditMoviePage extends Component {
 
@@ -34,37 +35,43 @@ export default class EditMoviePage extends Component {
         onSubmit={this.handleSubmit}>
         <div>
           <label
-            htmlFor='newTitle'>
+            htmlFor='newTitle'
+            className='edit_movie_title_label'>
               Title: 
           </label>
           <textarea
             type='text'
             id='newTitle'
+            className='edit_movie_title'
             required
             defaultValue={movie.title}>
           </textarea>
         </div>
         <div>
           <label
-            htmlFor='newComments'>
+            htmlFor='newComments'
+            className='edit_movie_comments_label'>
               Comments:
           </label>
           <textarea
             type='text'
             id='newComments'
+            className='edit_movie_comments'
             defaultValue={movie.comments}
             required>
           </textarea>
         </div>
         <div>
           <label
-            htmlFor='newRating'>
+            htmlFor='newRating'
+            className='edit_movie_rating_label'>
               Rating:  
           </label>
           <select 
             type='number'
             name='newRating'
             id='newRating'
+            className='edit_movie_rating'
             defaultValue={movie.rating}
             required>
             <option value='1'>1 star</option>
@@ -74,8 +81,12 @@ export default class EditMoviePage extends Component {
             <option value='5'>5 star</option>
           </select>
         </div>
-        <button type="submit">Submit</button>
-        <Link to={`/movie/${movie.id}`} className='Button'>
+        <button 
+          type="submit"
+          className='edit_movie_submit_button'>
+            Submit
+        </button>
+        <Link to={`/movie/${movie.id}`} className='edit_movie_back_button'>
           Back
         </Link>
       </form>
@@ -86,8 +97,12 @@ export default class EditMoviePage extends Component {
     const { movie } = this.context
     return (
       <main>
-        <h1> Edit {movie.title}'s Information </h1>
-        <section>{this.renderEditMovie()}</section>
+        <section className='edit_movie_section'>
+          <div className='edit_render'>
+            <h2 className='edit_movie_page_title'> Edit {movie.title}'s Information </h2>
+            {this.renderEditMovie()}
+          </div>
+        </section>
       </main>
     )
   }
