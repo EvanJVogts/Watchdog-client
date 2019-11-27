@@ -1,3 +1,72 @@
 .error {
   color: red;
 }
+
+.first_name {
+  margin: 20px;
+}
+
+.last_name {
+  margin: 20px;
+}
+
+.email {
+  margin: 20px;
+}
+
+.password {
+  margin: 20px;
+}
+
+.first_name_label {
+  margin-right: 10px;
+}
+
+.last_name_label {
+  margin-right: 10px;
+}
+
+.email_label {
+  margin-right: 10px;
+}
+
+.password_label {
+  margin-right: 10px;
+}
+
+.signup_submit_button {
+  padding: 30px;
+  margin: 10px;
+  text-decoration: none;
+  color: #F5F5F5;
+  border: 1px solid #1961BF;
+  border-radius: 5%;
+  background: #566F8F;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  max-width: 120px;
+}
+
+.signup_back_button {
+  padding: 30px;
+  margin: 10px;
+  text-decoration: none;
+  color: #F5F5F5;
+  border: 1px solid #1961BF;
+  border-radius: 5%;
+  background: #566F8F;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+.signup_submit_button:hover {
+  color: #DBBD93;
+  border-color: #D6973C;
+}
+
+.signup_back_button:hover {
+  color: #DBBD93;
+  border-color: #D6973C;
+}

@@ -39,6 +39,9 @@ export default class NavBar extends Component {
         {/* <Link to='/home'>
           <img src={Logo} alt='Watchdog Logo' className='nav_bar_logo'></img>
         </Link> */}
+        <Link to='/home'>
+          <p className='nav_bar_logo_text'>Your Movies Here</p>
+        </Link>
         {this.context.loggedIn || TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}

@@ -77,10 +77,7 @@ const MovieApiService = {
       (!res.ok)
         ? res.json().then(e => Promise.reject(e))
         : ''
-      )
-    .then(data => {
-      console.log({ data })
-    })
+    )
   },
 }
 

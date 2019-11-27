@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SingleMovieContext from '../../contexts/SingleMovieContext';
 import MovieApiService from '../../services/movie-api-service';
 import { Link } from 'react-router-dom';
-import { Button } from '../Utility/Utility';
+// import { Button } from '../Utility/Utility';
 import './NewMovieForm.css';
 
 export default class NewMovieForm extends Component {
@@ -15,9 +15,7 @@ export default class NewMovieForm extends Component {
     MovieApiService.addNewMovie(title.value, rating.value, comments.value)
       .then(this.context.addNewMovie)
       .then(() => {
-        title.value = ''
-        rating.value = null
-        comments.value = ''
+        this.props.history.push('/home')
       })
       .catch(this.context.setError)
   }
@@ -73,11 +71,11 @@ export default class NewMovieForm extends Component {
           <label className='favorite-label' htmlFor='favorite'>Favorite:</label>
           <input type='checkbox' name='favorite' className='favorite-checkbox'></input>
         </div> */}
-          <Button 
+          <button 
             type="submit">
               Submit
-          </Button>
-          <Button type="reset">Reset</Button>
+          </button>
+          <button type="reset">Reset</button>
           <Link to='/home' className='Button'>Back</Link>
       </form>
     )

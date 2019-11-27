@@ -52,3 +52,16 @@ nav {
   top: 4px;
   left: 8px;
 }
+
+.nav_bar_logo_text {
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  color:#F5F5F5;
+}
+
+.nav_bar_logo_text:hover {
+  text-decoration: underline;
+}

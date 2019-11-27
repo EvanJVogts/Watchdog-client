@@ -4,9 +4,9 @@ import AuthApiService from '../../services/auth-api-service';
 // import { Button, Input } from '../Utility/Utility';
 import { Link } from 'react-router-dom';
 import UserContext from '../../contexts/UserContext';
-import './LoginForm.css';
+import './DemoInfoForm.css';
 
-export default class NewUserForm extends Component {
+export default class DemoInfoForm extends Component {
   state = { error: null }
 
   static contextType = UserContext;
@@ -27,7 +27,7 @@ export default class NewUserForm extends Component {
         password.value = ''
         TokenService.saveAuthToken(res.authToken)
         this.context.setLoggedIn(userName)
-        this.props.history.push('/home')
+        console.log('Login success!')
       })
       .catch(res => {
         this.setState({ error: res.error })
@@ -49,7 +49,8 @@ export default class NewUserForm extends Component {
             <input 
               type="text" 
               name='email' 
-              id='LoginForm_email' 
+              id='LoginForm_email'
+              defaultValue='TestEmail123@gmail.com' 
               required>
             </input>
           </div>
@@ -58,7 +59,8 @@ export default class NewUserForm extends Component {
             <input 
               type='password'
               name='password' 
-              id='LoginForm_password' 
+              id='LoginForm_password'
+              defaultValue='Test12345!' 
               required>
             </input>
           </div>

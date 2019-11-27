@@ -30,7 +30,7 @@ export default class LandingPage extends Component {
         <Link to='/register' className='Landing_Register_Button'>
           New User?
         </Link>
-        <Link to='/home/:userId' className='Landing_Demo_Button'>
+        <Link to='/demo' className='Landing_Demo_Button'>
               Demo
         </Link>
       </div>

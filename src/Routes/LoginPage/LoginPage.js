@@ -15,7 +15,8 @@ export default class LoginPage extends Component {
           </h2>
         </div>
         <section className='login-form-section'>
-          <LoginForm />
+          <LoginForm 
+            history = {this.props.history}/>
         </section>
     </main>
     )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SingleMovieContext from '../../contexts/SingleMovieContext';
 import MovieApiService from '../../services/movie-api-service'
-import { Button } from '../../components/Utility/Utility';
+// import { Button } from '../../components/Utility/Utility';
 import { Link } from 'react-router-dom'
 
 export default class EditMoviePage extends Component {
@@ -19,14 +19,14 @@ export default class EditMoviePage extends Component {
   renderDeleteMovie() {
     const {movie} = this.context
     return <>
-        <Button 
+        <button 
           className='Button'
           onClick={() => {
             MovieApiService.deleteMovie(movie.id)
             .then(() => {this.nextPath('/home')}) 
           }}>
             Yes
-        </Button>
+        </button>
         <Link to={`/movie/${movie.id}`} className='Button'>
           No
         </Link>

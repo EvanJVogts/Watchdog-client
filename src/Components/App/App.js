@@ -9,6 +9,7 @@ import ExpandedMoviePage from '../../routes/ExpandedMoviePage/ExpandedMoviePage'
 import NewMoviePage from '../../routes/NewMoviePage/NewMoviePage';
 import EditMoviePage from '../../routes/EditMoviePage/EditMoviePage';
 import DeleteMoviePage from '../../routes/DeleteMoviePage/DeleteMoviePage';
+import DemoInfo from '../../routes/DemoInfo/DemoInfo';
 import PrivateRoute from '../Utility/PrivateRoute';
 import PublicOnlyRoute from '../Utility/PublicOnlyRoute'
 import './App.css';
@@ -39,6 +40,10 @@ class App extends Component {
                 <PublicOnlyRoute
                   path={'/login'}
                   component={LoginPage}
+                  />
+                <PublicOnlyRoute
+                  path={'/demo'}
+                  component={DemoInfo}
                   />
                 <PublicOnlyRoute
                   path={'/register'}

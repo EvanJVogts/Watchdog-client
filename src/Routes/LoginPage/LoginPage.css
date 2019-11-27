@@ -2,6 +2,7 @@
   margin-bottom: 28vh;
   margin-top: 0vh;
   font-size: 300%;
+  text-shadow: 5px 5px 15px black;
 }
 
 .login-slogan {
@@ -13,4 +14,5 @@
 
 .login-form-section {
   padding: 80px;
+  background: #afb7c2;
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Input, Required } from '../Utility/Utility';
+// import { Button, Input, Required } from '../Utility/Utility';
 import AuthApiService from '../../services/auth-api-service';
+import './NewUserForm.css';
 
 export default class NewUserForm extends Component {
   static defaultProps = {
@@ -26,6 +27,7 @@ export default class NewUserForm extends Component {
         email.value = ''
         password.value = ''
         this.props.onRegistrationSuccess()
+        this.props.history.push('/home')
       })
       .catch(res => {
         this.setState({ error: res.error })
@@ -47,56 +49,64 @@ export default class NewUserForm extends Component {
         </div>
 
         <div className='first_name'>
-          <label htmlFor='NewUserForm_first_name'>
-            First name <Required />
+          <label 
+            htmlFor='NewUserForm_first_name'
+            className='first_name_label'>
+            First name
           </label>
-          <Input
+          <input
             type="text" 
             name='first_name' 
             id='NewUserForm_first_name' 
             required>
-          </Input>
+          </input>
         </div>
 
         <div className='last_name'>
-          <label htmlFor="NewUserForm_last_name">
-            Last name <Required />
+          <label 
+            htmlFor="NewUserForm_last_name"
+            className='last_name_label'>
+            Last name
           </label>
-          <Input
+          <input
             type="text" 
             name='last_name' 
             id='NewUserForm_last_name' 
             required>
-          </Input>
+          </input>
         </div>
 
         <div className='email'>
-          <label htmlFor="NewUserForm_email">
-            Email <Required />
+          <label 
+            htmlFor="NewUserForm_email"
+            className='email_label'>
+            Email
           </label>
-          <Input
+          <input
             type="text" 
             name='email' 
             id='NewUserForm_email' 
             required>
-          </Input>
+          </input>
         </div>
 
         <div className='password'>
-          <label htmlFor="NewUserForm_password">
-            Password <Required />
+          <label 
+            htmlFor="NewUserForm_password"
+            className='password_label'>
+            Password
           </label>
-          <Input
+          <input
             type="password" 
             name='password' 
             id='NewUserForm_password' 
             required>
-          </Input>
+          </input>
         </div>
 
-        <Button type='submit'>Submit</Button>
+        <button type='submit' className='signup_submit_button'>Submit</button>
 
-        <Link to='/' className='Button'>Back</Link>
+        <Link to='/' className='signup_back_button'>Back</Link>
 
       </form>
     )

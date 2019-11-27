@@ -1,0 +1,16 @@
+.demo-title {
+  margin-bottom: 28vh;
+  margin-top: 0vh;
+  font-size: 300%;
+}
+
+.demo-slogan {
+  margin-bottom: 2vh;
+  display: block;
+  font-family: 'Gentium Book Basic', serif;
+  font-weight: bold;
+}
+
+.demo-form-section {
+  padding: 80px;
+}

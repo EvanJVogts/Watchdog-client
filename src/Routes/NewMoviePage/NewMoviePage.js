@@ -10,7 +10,8 @@ export default class NewMoviePage extends Component {
           <h1>New Movie</h1>
         </header>
         <section>
-          <NewMovieForm />
+          <NewMovieForm 
+          history={this.props.history}/>
         </section>
       </main>
     )
