@@ -21,7 +21,7 @@ export default class NewUserPage extends Component {
           <h1>WatchDog</h1>
         </header>
         <section className="NewUserPage">
-          <h2>Sign Up!</h2>
+          <h2 className='signup-form-title'>Sign Up!</h2>
             <NewUserForm 
               onRegistrationSuccess={this.handleRegistrationSucess}
             />

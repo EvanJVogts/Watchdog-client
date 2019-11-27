@@ -20,18 +20,22 @@
 
 .first_name_label {
   margin-right: 10px;
+  font-family: 'Gentium Book Basic', serif;
 }
 
 .last_name_label {
   margin-right: 10px;
+  font-family: 'Gentium Book Basic', serif;
 }
 
 .email_label {
   margin-right: 10px;
+  font-family: 'Gentium Book Basic', serif;
 }
 
 .password_label {
   margin-right: 10px;
+  font-family: 'Gentium Book Basic', serif;
 }
 
 .signup_submit_button {
@@ -39,7 +43,7 @@
   margin: 10px;
   text-decoration: none;
   color: #F5F5F5;
-  border: 1px solid #1961BF;
+  border: 2px solid #1961BF;
   border-radius: 5%;
   background: #566F8F;
   font-size: 18px;
@@ -52,7 +56,7 @@
   margin: 10px;
   text-decoration: none;
   color: #F5F5F5;
-  border: 1px solid #1961BF;
+  border: 2px solid #1961BF;
   border-radius: 5%;
   background: #566F8F;
   font-size: 18px;

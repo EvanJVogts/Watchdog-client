@@ -11,13 +11,10 @@ export default class LoginPage extends Component {
         </header>
         <div className='login-slogan'>
           <h2>
-              The movies you love!
+              Log into an existing account!
           </h2>
         </div>
         <section className='login-form-section'>
-          <h3>
-            Login
-          </h3>
           <LoginForm 
             history = {this.props.history}/>
         </section>

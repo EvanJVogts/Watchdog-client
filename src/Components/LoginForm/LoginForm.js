@@ -45,16 +45,24 @@ export default class NewUserForm extends Component {
           {error && <p className='error'>Something went wrong!</p>}
         </div>
           <div className='login-email-input'>
-            <label htmlFor="LoginForm_email">Email</label>
+            <label 
+              htmlFor="LoginForm_email"
+              className='login-email-input_label'>
+                Email
+            </label>
             <input 
               type="text" 
               name='email' 
-              id='LoginForm_email' 
+              id='LoginForm_email'
               required>
             </input>
           </div>
           <div className='login-password-input'>
-            <label htmlFor="LoginForm_password">Password</label>
+            <label 
+              htmlFor="LoginForm_password"
+              className='login-password-input_label'>
+                Password
+            </label>
             <input 
               type='password'
               name='password' 

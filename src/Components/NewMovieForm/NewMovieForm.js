@@ -27,38 +27,44 @@ export default class NewMovieForm extends Component {
         onSubmit={this.handleSubmit}>
         <div className='form-section'>
           <label 
-            htmlFor="title">
+            htmlFor="title"
+            className='new_movie_title_label'>
               Movie title: 
           </label>
           <input 
             type='text' 
             name='title'
             id='title'
+            className='new_movie_title'
             required>
           </input>
         </div>
         <div className='form-section'>
           <label 
-            htmlFor='comments'>
+            htmlFor='comments'
+            className='new_movie_comments_label'>
               Comments: 
           </label>
           <textarea 
             type='text'
             id='comments'
             name='comments'
-            rows='10'
+            rows='15'
+            className='new_movie_comments'
             required>
           </textarea>
         </div>
         <div className='form-section'>
           <label 
-            htmlFor='rating'>
+            htmlFor='rating'
+            className='new_movie_rating_label'>
               Movie rating: 
           </label>
           <select 
             type='number'
             name='rating'
             id='rating'
+            className='new_movie_rating'
             required>
             <option value='1'>1 star</option>
             <option value='2'>2 star</option>
@@ -72,11 +78,16 @@ export default class NewMovieForm extends Component {
           <input type='checkbox' name='favorite' className='favorite-checkbox'></input>
         </div> */}
           <button 
-            type="submit">
+            type="submit"
+            className='new_movie_submit_button'>
               Submit
           </button>
-          <button type="reset">Reset</button>
-          <Link to='/home' className='Button'>Back</Link>
+          <button 
+            type="reset"
+            className='new_movie_reset_button'>
+              Reset
+          </button>
+          <Link to='/home' className='new_movie_back_button'>Back</Link>
       </form>
     )
   }

@@ -10,6 +10,16 @@
   margin: 20px;
 }
 
+.login-email-input_label {
+  margin-right: 10px;
+  font-family: 'Gentium Book Basic', serif;
+}
+
+.login-password-input_label {
+  margin-right: 10px;
+  font-family: 'Gentium Book Basic', serif;
+}
+
 .login-submit-button {
   padding: 30px;
   margin: 10px;
