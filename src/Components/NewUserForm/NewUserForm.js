@@ -40,14 +40,11 @@ export default class NewUserForm extends Component {
     return (
       <form 
         className="NewUserForm"
-        onSubmit={this.handleSubmit}
-      >
-
+        onSubmit={this.handleSubmit}>
         <div role='alert'>
           {error && <p className='error'>Something went wrong!</p>}
         </div>
-
-        <div className='first_name'>
+        <div>
           <label 
             htmlFor='NewUserForm_first_name'
             className='first_name_label'>
@@ -56,12 +53,12 @@ export default class NewUserForm extends Component {
           <input
             type="text" 
             name='first_name' 
-            id='NewUserForm_first_name' 
+            id='NewUserForm_first_name'
+            className='first_name' 
             required>
           </input>
         </div>
-
-        <div className='last_name'>
+        <div>
           <label 
             htmlFor="NewUserForm_last_name"
             className='last_name_label'>
@@ -71,11 +68,11 @@ export default class NewUserForm extends Component {
             type="text" 
             name='last_name' 
             id='NewUserForm_last_name' 
+            className='last_name'
             required>
           </input>
         </div>
-        
-        <div className='email'>
+        <div>
           <label 
             htmlFor="NewUserForm_email"
             className='email_label'>
@@ -85,11 +82,11 @@ export default class NewUserForm extends Component {
             type="email" 
             name='email' 
             id='NewUserForm_email' 
+            className='signup_email'
             required>
           </input>
         </div>
-
-        <div className='password'>
+        <div>
           <label 
             htmlFor="NewUserForm_password"
             className='password_label'>
@@ -99,10 +96,10 @@ export default class NewUserForm extends Component {
             type="password" 
             name='password' 
             id='NewUserForm_password' 
+            className='signup_password'
             required>
           </input>
         </div>
-
         <button 
           type='submit' 
           className='signup_submit_button'>
