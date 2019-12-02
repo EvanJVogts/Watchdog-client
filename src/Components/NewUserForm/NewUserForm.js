@@ -74,7 +74,7 @@ export default class NewUserForm extends Component {
             required>
           </input>
         </div>
-
+        
         <div className='email'>
           <label 
             htmlFor="NewUserForm_email"
@@ -82,7 +82,7 @@ export default class NewUserForm extends Component {
             Email
           </label>
           <input
-            type="text" 
+            type="email" 
             name='email' 
             id='NewUserForm_email' 
             required>

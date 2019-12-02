@@ -16,21 +16,28 @@ export default class NavBar extends Component {
 
   renderLoginLink() {
     return(
-      <Link 
-        to='/login'
-        className='nav-login-button'>
-          Log in
-      </Link>
+      <div>
+        <Link 
+          to='/login'
+          className='nav-login-button'>
+            Log in
+        </Link>
+        <Link to='/register' className='nav-register-button'>
+          Get started
+        </Link>
+      </div>
     )
   }
   renderLogoutLink() {
     return(
-      <Link
-        onClick={this.handleLogoutClick}
-        to='/'
-        className='nav-logout-button'>
-          Logout
-      </Link>
+      <div>
+        <Link
+          onClick={this.handleLogoutClick}
+          to='/'
+          className='nav-logout-button'>
+            Logout
+        </Link>
+      </div>
     )
   }
   render() {
@@ -40,7 +47,7 @@ export default class NavBar extends Component {
           <img src={Logo} alt='Watchdog Logo' className='nav_bar_logo'></img>
         </Link> */}
         <Link to='/home'>
-          <p className='nav_bar_logo_text'>Your Movies Here</p>
+          <p className='nav_bar_logo_text'>WD</p>
         </Link>
         {this.context.loggedIn || TokenService.hasAuthToken()
           ? this.renderLogoutLink()

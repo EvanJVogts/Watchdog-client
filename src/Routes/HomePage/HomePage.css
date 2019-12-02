@@ -17,12 +17,6 @@ ul {
   margin-bottom: 100px;
 }
 
-h2 {
-  margin-top: 0px;
-  padding-top: 0px;
-  color: #F14938;
-}
-
 .add_new_movie_button {
   padding: 30px;
   margin: 10px;
@@ -53,6 +47,9 @@ h2 {
   margin-left: 16px;
   margin-right: 16px;
   font-variant: small-caps;
+  margin-top: 0px;
+  padding-top: 0px;
+  color: #F14938;
 }
 
 .all_movies_fieldset {

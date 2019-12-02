@@ -51,7 +51,7 @@ export default class NewUserForm extends Component {
                 Email
             </label>
             <input 
-              type="text" 
+              type="email" 
               name='email' 
               id='LoginForm_email'
               required>
