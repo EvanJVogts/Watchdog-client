@@ -32,7 +32,7 @@
 
 .Landing_logged-in_Button {
   padding: 20px;
-  margin: 0px 20px 0px 20px;
+  margin: 0px 30px 0px 30px;
   text-decoration: none;
   color: #F5F5F5;
   border-radius: 5%;
@@ -93,7 +93,7 @@
 
 .landing-description {
   margin-bottom: 0vh;
-  padding-top: 2vh;
+  padding-top: 4vh;
   margin-left: 10%;
   margin-right: 10%;
   font-family: 'Gentium Book Basic', serif;

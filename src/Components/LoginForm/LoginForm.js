@@ -80,6 +80,12 @@ export default class NewUserForm extends Component {
           className='login-back-button'>
             Back
         </Link>
+        <Link
+          to='/register'
+          className='login-register-button'
+          >
+            New user?
+        </Link>
       </form>
     )
   }

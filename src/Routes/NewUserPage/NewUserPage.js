@@ -16,17 +16,21 @@ export default class NewUserPage extends Component {
 
   render() {
     return (
-      <main>
-        <header className='NewUser-title'>
-          <h1>WatchDog</h1>
-        </header>
-        <section className="NewUserPage">
-          <h2 className='signup-form-title'>Sign Up!</h2>
-            <NewUserForm 
-              onRegistrationSuccess={this.handleRegistrationSucess}
-            />
+      <>
+        <section className='signup-title-section'>
+          <header className='NewUser-title'>
+            <h1>WatchDog</h1>
+          </header>
         </section>
-      </main>
+        <section className="NewUserPage">
+          <div className='NewUserBox'>
+            <h2 className='signup-form-title'>Sign Up!</h2>
+              <NewUserForm 
+                onRegistrationSuccess={this.handleRegistrationSucess}
+              />
+          </div>
+        </section>
+      </>
     )
   }
 }

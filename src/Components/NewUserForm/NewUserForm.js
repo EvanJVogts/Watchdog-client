@@ -103,10 +103,26 @@ export default class NewUserForm extends Component {
           </input>
         </div>
 
-        <button type='submit' className='signup_submit_button'>Submit</button>
-
-        <Link to='/' className='signup_back_button'>Back</Link>
-
+        <button 
+          type='submit' 
+          className='signup_submit_button'>
+            Submit
+        </button>
+        <Link 
+          to='/'>
+            <button 
+              className='signup_back_button'>
+                Back
+            </button>
+        </Link>
+        <Link
+          to='/login'
+          className='signup-login-link'>
+            <button 
+              className='signup-login-button'>
+                Already have an account?
+            </button>
+        </Link>
       </form>
     )
   }
