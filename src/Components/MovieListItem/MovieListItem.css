@@ -14,3 +14,22 @@
   color: #FFC861;
   box-shadow: 0px 0px 15px #F29E00;
 }
+
+@media only screen and (min-width: 1024px) {
+  .movieList {
+    color: #F5F5F5;
+    text-decoration: none;
+  }
+  
+  .movieListItem {
+    background: #586F8C;
+    border: 1px solid #4B6373;
+    border-bottom-width: 6px;
+    border-bottom-color: #004DB3;
+  }
+  
+  .movieListItem:hover {
+    color: #FFC861;
+    box-shadow: 0px 0px 15px #F29E00;
+  }
+}

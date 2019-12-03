@@ -32,7 +32,7 @@ p {
   border-radius: 5%;
   background: #004DB3;
   display: inline-block;
-  width: 30%;
+  width: 40%;
   border: none;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
@@ -46,7 +46,7 @@ p {
   border-radius: 5%;
   background: #004DB3;
   display: inline-block;
-  width: 30%;
+  width: 40%;
   border: none;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
@@ -123,3 +123,131 @@ p {
   font-family: 'Gentium Book Basic', serif;
 }
 
+@media only screen and (min-width: 1024px) {
+  * {
+    box-sizing: border-box;
+  }
+  
+  header {
+    padding: 2vh;
+    height: 18vh;
+  }
+  
+  p {
+    margin: 0 auto;
+  }
+  
+  .form-section {
+    display: block;
+    text-align: center;
+  }
+  
+  .favorite-label {
+    display: inline;
+  }
+  
+  .favorite-checkbox {
+    display: inline;
+  }
+  
+  .new_movie_submit_button {
+    padding: 12px;
+    margin: 5% 2% 0px 2%;
+    text-decoration: none;
+    color:#F5F5F5;
+    border-radius: 5%;
+    background: #004DB3;
+    display: inline-block;
+    width: 30%;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+  
+  .new_movie_reset_button {
+    padding: 12px;
+    margin: 5% 2% 0px 2%;
+    text-decoration: none;
+    color:#F5F5F5;
+    border-radius: 5%;
+    background: #004DB3;
+    display: inline-block;
+    width: 30%;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+  
+  .new_movie_submit_button:hover {
+    color: #FFC861;
+    background-color: #1E74E5;
+    cursor: pointer;
+  }
+  
+  .new_movie_reset_button:hover {
+    color: #FFC861;
+    background-color: #1E74E5;
+    cursor: pointer;
+  }
+  
+  .new_movie_submit_button:visited {
+    text-decoration: none;
+  }
+  
+  .new_movie_reset_button:visited {
+    text-decoration: none;
+  }
+  
+  .new_movie_title {
+    margin: 0% 0% 2% 0%;
+    text-align: center;
+    width: 80%;
+    height: 50px;
+    color: #18100C;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+  }
+  
+  .new_movie_comments {
+    margin: 0% 0% 2% 0%;
+    text-align: center;
+    width: 80%;
+    color: #18100C;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+  }
+  
+  .new_movie_rating {
+    margin: 0% 0% 5% 0%;
+    color: #18100C;
+    height: 5vh;
+    width: 80%;
+    font-size: 100%;
+  }
+  
+  .new_movie_title_label {
+    display: block;
+    margin-bottom: 1%;
+    color: #18100C;
+    font-size: 120%;
+    font-family: 'Gentium Book Basic', serif;
+  }
+  
+  .new_movie_comments_label {
+    display: block;
+    margin-bottom: 1%;
+    color: #18100C;
+    font-size: 120%;
+    font-family: 'Gentium Book Basic', serif;
+  }
+  
+  .new_movie_rating_label {
+    display: block;
+    margin-bottom: 1%;
+    color: #18100C;
+    font-size: 120%;
+    font-family: 'Gentium Book Basic', serif;
+  }
+  
+  
+}

@@ -6,71 +6,71 @@
   margin: 0% 0% 2% 0%;
   text-align: center;
   width: 70%;
-  height: 50px;
+  height: 30px;
   color: #18100C;
   font-family: "Open Sans", sans-serif;
-  font-size: 100%;
+  font-size: 80%;
 }
 
 .last_name {
   margin: 0% 0% 2% 0%;
   text-align: center;
   width: 70%;
-  height: 50px;
+  height: 30px;
   color: #18100C;
   font-family: "Open Sans", sans-serif;
-  font-size: 100%;
+  font-size: 80%;
 }
 
 .signup_email {
   margin: 0% 0% 2% 0%;
   text-align: center;
   width: 70%;
-  height: 50px;
+  height: 30px;
   color: #18100C;
   font-family: "Open Sans", sans-serif;
-  font-size: 100%;
+  font-size: 80%;
 }
 
 .signup_password {
   margin: 0% 0% 2% 0%;
   text-align: center;
   width: 70%;
-  height: 50px;
+  height: 30px;
   color: #18100C;
   font-family: "Open Sans", sans-serif;
-  font-size: 100%;
+  font-size: 80%;
 }
 
 .first_name_label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #18100C;
-  font-size: 120%;
+  font-size: 100%;
   font-family: 'Gentium Book Basic', serif;
 }
 
 .last_name_label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #18100C;
-  font-size: 120%;
+  font-size: 100%;
   font-family: 'Gentium Book Basic', serif;
 }
 
 .email_label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #18100C;
-  font-size: 120%;
+  font-size: 100%;
   font-family: 'Gentium Book Basic', serif;
 }
 
 .password_label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #18100C;
-  font-size: 120%;
+  font-size: 100%;
   font-family: 'Gentium Book Basic', serif;
 }
 
@@ -85,7 +85,7 @@
   width: 30%;
   border: none;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .signup_back_button {
@@ -99,14 +99,15 @@
   width: 30%;
   border: none;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .signup-login-button {
   text-decoration: none;
   border: none;
-  width: 30%;
-  font-size: 80%;
+  width: 40%;
+  min-width: 160px;
+  font-size: 70%;
   padding: 6px;
   background: #AFB7C2;
 }
@@ -143,4 +144,153 @@
 
 .signup-login-button:visited {
   text-decoration: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .error {
+    color: red;
+  }
+  
+  .first_name {
+    margin: 0% 0% 2% 0%;
+    text-align: center;
+    width: 70%;
+    height: 50px;
+    color: #18100C;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+  }
+  
+  .last_name {
+    margin: 0% 0% 2% 0%;
+    text-align: center;
+    width: 70%;
+    height: 50px;
+    color: #18100C;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+  }
+  
+  .signup_email {
+    margin: 0% 0% 2% 0%;
+    text-align: center;
+    width: 70%;
+    height: 50px;
+    color: #18100C;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+  }
+  
+  .signup_password {
+    margin: 0% 0% 2% 0%;
+    text-align: center;
+    width: 70%;
+    height: 50px;
+    color: #18100C;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+  }
+  
+  .first_name_label {
+    display: block;
+    margin-bottom: 10px;
+    color: #18100C;
+    font-size: 120%;
+    font-family: 'Gentium Book Basic', serif;
+  }
+  
+  .last_name_label {
+    display: block;
+    margin-bottom: 10px;
+    color: #18100C;
+    font-size: 120%;
+    font-family: 'Gentium Book Basic', serif;
+  }
+  
+  .email_label {
+    display: block;
+    margin-bottom: 10px;
+    color: #18100C;
+    font-size: 120%;
+    font-family: 'Gentium Book Basic', serif;
+  }
+  
+  .password_label {
+    display: block;
+    margin-bottom: 10px;
+    color: #18100C;
+    font-size: 120%;
+    font-family: 'Gentium Book Basic', serif;
+  }
+  
+  .signup_submit_button {
+    padding: 12px;
+    margin: 5% 2% 0px 2%;
+    text-decoration: none;
+    color:#F5F5F5;
+    border-radius: 5%;
+    background: #004DB3;
+    display: inline-block;
+    width: 30%;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+  
+  .signup_back_button {
+    padding: 12px;
+    margin: 5% 2% 0px 2%;
+    text-decoration: none;
+    color:#F5F5F5;
+    border-radius: 5%;
+    background: #004DB3;
+    display: inline-block;
+    width: 30%;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+  }
+  
+  .signup-login-button {
+    text-decoration: none;
+    border: none;
+    width: 30%;
+    font-size: 80%;
+    padding: 6px;
+    background: #AFB7C2;
+  }
+  
+  .signup-login-link {
+    display: block;
+    margin: 3% 5% 5% 5%;
+  }
+  
+  .signup_submit_button:hover {
+    color: #FFC861;
+    background-color: #1E74E5;
+    cursor: pointer;
+  }
+  
+  .signup_back_button:hover {
+    color: #FFC861;
+    background-color: #1E74E5;
+    cursor: pointer;
+  }
+  
+  .signup-login-button:hover {
+    color: #004DB3;
+    cursor: pointer;
+  }
+  
+  .signup_submit_button:visited {
+    text-decoration: none;
+  }
+  
+  .signup_back_button:visited {
+    text-decoration: none;
+  }
+  
+  .signup-login-button:visited {
+    text-decoration: none;
+  }
 }

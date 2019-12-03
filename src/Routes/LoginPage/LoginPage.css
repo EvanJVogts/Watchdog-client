@@ -1,15 +1,16 @@
 .login-title {
-  margin-bottom: 10vh;
-  margin-top: 6vh;
-  font-size: 500%;
+  margin-bottom: 2vh;
+  margin-top: 8vh;
+  font-size: 160%;
   text-shadow: 7px 7px #18100C;
   color: #F14938;
+  font-family: 'Alfa Slab One', cursive;
 }
 
 .login-slogan {
   font-family: 'Gentium Book Basic', serif;
   color: #F14938;
-  font-size: 200%;
+  font-size: 150%;
   font-variant: small-caps;
 }
 
@@ -26,6 +27,40 @@
 
 .login-box {
   background: #F5F5F5;
-  margin: 0% 5% 0% 5%;
+  margin: 0% 2% 0% 2%;
   padding: 2%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .login-title {
+    margin-bottom: 10vh;
+    margin-top: 6vh;
+    font-size: 500%;
+    text-shadow: 7px 7px #18100C;
+    color: #F14938;
+  }
+  
+  .login-slogan {
+    font-family: 'Gentium Book Basic', serif;
+    color: #F14938;
+    font-size: 200%;
+    font-variant: small-caps;
+  }
+  
+  .login-page {
+    background-color:#AFB7C2;
+    padding: 2% 4% 2% 4%;
+  }
+  
+  .login-title-section {
+    background-color: #586F8C;
+    line-height: 0px;
+    padding: 1px;
+  }
+  
+  .login-box {
+    background: #F5F5F5;
+    margin: 0% 5% 0% 5%;
+    padding: 2%;
+  }
 }

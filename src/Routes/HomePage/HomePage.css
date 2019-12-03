@@ -1,7 +1,7 @@
 .homepage_title {
   margin-bottom: 4vh;
   margin-top: 5vh;
-  font-size: 380%;
+  font-size: 160%;
   text-shadow: 7px 7px #18100C;
   color: #F14938;
   font-family: 'Alfa Slab One', cursive;
@@ -30,13 +30,13 @@ ul {
 
 .add_new_movie_button {
   padding: 12px;
-  margin: 0px 80px 0px 80px;
+  margin: 0px 5% 0px 5%;
   text-decoration: none;
   color:#F5F5F5;
   border-radius: 5%;
   background: #004DB3;
   display: inline-block;
-  width: 340px;
+  width: 80%;
 }
 
 .add_new_movie_button:hover {
@@ -54,7 +54,7 @@ ul {
   background: #F5F5F5;
   box-shadow: 0px 0px 25px #586F8C;
   padding: 2% 6% 6% 6%;
-  margin: 0% 10% 0% 10%;
+  margin: 0% 5% 0% 5%;
   border: none;
 }
 
@@ -69,8 +69,87 @@ ul {
 }
 
 .all_movies_fieldset {
-  border-width: 14px;
+  border-width: 10px;
   padding-bottom: 0px;
-  margin-bottom: 90px;
+  margin-bottom: 22px;
   border-color: #586F8C;
+}
+
+@media only screen and (min-width: 1024px) {
+  .homepage_title {
+    margin-bottom: 4vh;
+    margin-top: 5vh;
+    font-size: 380%;
+    text-shadow: 7px 7px #18100C;
+    color: #F14938;
+    font-family: 'Alfa Slab One', cursive;
+  }
+  
+  .homepage_title-section {
+    background-color: #586F8C;
+    line-height: 0px;
+    padding-bottom: 1%;
+  }
+  
+  .homepage_title-text {
+    margin-top: 10vh;
+  }
+  
+  h3 {
+    text-align: center;
+    margin: 4% 2% 4% 2%;
+    padding: 1%;
+  }
+  
+  ul {
+    padding: 0px;
+    margin-bottom: 80px;
+  }
+  
+  .add_new_movie_button {
+    padding: 12px;
+    margin: 0px 80px 0px 80px;
+    text-decoration: none;
+    color:#F5F5F5;
+    border-radius: 5%;
+    background: #004DB3;
+    display: inline-block;
+    width: 340px;
+  }
+  
+  .add_new_movie_button:hover {
+    color: #FFC861;
+    background-color: #1E74E5;
+  }
+  
+  .homepage_all_movie_section {
+    background:#AFB7C2;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  
+  .homepage_all_movies {
+    background: #F5F5F5;
+    box-shadow: 0px 0px 25px #586F8C;
+    padding: 2% 6% 6% 6%;
+    margin: 0% 10% 0% 10%;
+    border: none;
+  }
+  
+  .all_movies_legend_title {
+    font-size: 200%;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-variant: small-caps;
+    margin-top: 20px;
+    padding-top: 0px;
+    color: #F14938;
+  }
+  
+  .all_movies_fieldset {
+    border-width: 14px;
+    padding-bottom: 0px;
+    margin-bottom: 90px;
+    border-color: #586F8C;
+  }
 }
