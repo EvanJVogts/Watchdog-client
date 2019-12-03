@@ -5,12 +5,24 @@ import { Link } from 'react-router-dom'
 import './EditMoviePage.css'
 
 export default class EditMoviePage extends Component {
+  state = {
+    checkedFavorite: false,
+    checkedSeen: false
+  }
 
   static defaultProps = {
     match: { params: {} },
   }
 
   static contextType = SingleMovieContext
+  
+  handleCheckFavorite = () => {
+    this.setState({checkedFavorite: true});
+  }
+
+  handleCheckSeen = () => {
+    this.setState({checkedSeen: true});
+  }
 
   handleSubmit = event => {
     const {movie} = this.context
@@ -34,11 +46,21 @@ export default class EditMoviePage extends Component {
 
   handleFavoriteCheckbox() {
     const {movie} = this.context
-    if (movie.favorite === 'Favorite') {
-      return <input type='checkbox' name='newFavorite' id='newFavorite' className='edit-favorite-checkbox' value='Favorite' defaultChecked></input>
+    if (movie.favorite === true) {
+      return <input type='checkbox' name='newFavorite' id='newFavorite' className='edit-favorite-checkbox' onChange={this.handleCheckFavorite} defaultChecked/>
     }
-    if (movie.favorite === '') {
-      return <input type='checkbox' name='newFavorite' id='newFavorite' className='edit-favorite-checkbox' value='Favorite'></input>
+    if (movie.favorite === false) {
+      return <input type='checkbox' name='newFavorite' id='newFavorite' className='edit-favorite-checkbox' onChange={this.handleCheckFavorite}/>
+    }
+  }
+
+  handleSeenCheckbox() {
+    const {movie} = this.context
+    if (movie.seen === true) {
+      return <input type='checkbox' name='newSeen' id='newSeen' className='edit-seen-checkbox' onChange={this.handleCheckSeen} defaultChecked/>
+    }
+    if (movie.seen === false) {
+      return <input type='checkbox' name='newSeen' id='newSeen' className='edit-seen-checkbox' onChange={this.handleCheckSeen}/>
     }
   }
   
@@ -132,7 +154,7 @@ export default class EditMoviePage extends Component {
         </div>
         <div>
           <label className='edit-seen-label' htmlFor='newSeen'>Watched:</label>
-          <input type='checkbox' name='newSeen' id='newSeen' className='edit-seen-checkbox' value='Yes' unchecked-value='No'></input>
+          {this.handleSeenCheckbox()}
         </div>
         <button 
           type="submit"
