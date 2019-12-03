@@ -6,8 +6,8 @@ import './EditMoviePage.css'
 
 export default class EditMoviePage extends Component {
   state = {
-    checkedFavorite: false,
-    checkedSeen: false
+    checkedFavorite: this.context.movie.favorite,
+    checkedSeen: this.context.movie.seen
   }
 
   static defaultProps = {
@@ -17,27 +17,20 @@ export default class EditMoviePage extends Component {
   static contextType = SingleMovieContext
   
   handleCheckFavorite = () => {
-    this.setState({checkedFavorite: true});
+    this.setState({checkedFavorite: !this.state.checkedFavorite});
   }
 
   handleCheckSeen = () => {
-    this.setState({checkedSeen: true});
+    this.setState({checkedSeen: !this.state.checkedSeen});
   }
 
   handleSubmit = event => {
     const {movie} = this.context
     event.preventDefault()
-    const { newTitle, newRating, newComments, newPlatform, newFavorite, newSeen } = event.target
-    MovieApiService.editMovie(newTitle.value, newComments.value, newRating.value, movie.id, newPlatform.value, newFavorite.value, newSeen.value)
-      .then(() => {
-        movie.id = ''
-        newTitle.value = ''
-        newComments.value = ''
-        newRating.value = ''
-        newPlatform.value = ''
-        newFavorite.value = ''
-        newSeen.value = ''
-      })
+    const { newTitle, newRating, newComments, newPlatform } = event.target
+    const newFavorite = this.state.checkedFavorite
+    const newSeen = this.state.checkedSeen
+    MovieApiService.editMovie(newTitle.value, newComments.value, newRating.value, movie.id, newPlatform.value, newFavorite, newSeen)
       .then(() => {
         this.props.history.push('/home')
       })

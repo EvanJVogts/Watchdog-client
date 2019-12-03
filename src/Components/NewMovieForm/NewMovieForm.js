@@ -25,7 +25,6 @@ export default class NewMovieForm extends Component {
     const favorite = this.state.checkedFavorite
     const seen = this.state.checkedSeen
     MovieApiService.addNewMovie(title.value, rating.value, comments.value, platform.value, favorite, seen)
-      .then(this.context.addNewMovie)
       .then(() => {
         this.props.history.push('/home')
       })

@@ -5,6 +5,42 @@ import { Link } from 'react-router-dom'
 import Backarrow1 from '../../images/backarrow1.png';
 import './ExpandedMoviePage.css'
 
+function MovieRating ({ rating }) {
+  return (
+    <p className='expanded_rating'>{rating} Stars</p>
+  )
+}
+
+function MovieComments ({ comments }) {
+  return (
+    <p className='expanded_comments'>{comments}</p>
+  )
+}
+
+function MovieFavorite ({ favorite }) {
+  if (favorite === true) {
+    return (
+      <p>This movie is one of your favorites!</p>
+    )
+  } else {
+    return (
+      <p></p>
+    )
+  }
+}
+
+function MovieSeen ({ seen }) {
+  if (seen === true) {
+    return (
+      <p></p>
+    )
+  } else {
+    return (
+      <p>You haven't seen this movie yet.</p>
+    )
+  }
+}
+
 export default class ExpandedMoviePage extends Component {
 
   static defaultProps = {
@@ -29,9 +65,11 @@ export default class ExpandedMoviePage extends Component {
     const {movie} = this.context
     return <>
       <h2 className='expanded_title'>{movie.title}</h2>
+      <MovieSeen seen={movie.seen} />
       <fieldset className='expanded_movies_fieldset'>
         <MovieComments comments={movie.comments} />
       </fieldset>
+      <MovieFavorite favorite={movie.favorite} />
       <MovieRating rating={movie.rating} />
     </>
   }
@@ -64,16 +102,4 @@ export default class ExpandedMoviePage extends Component {
       </>
     )
   }
-}
-
-function MovieRating ({ rating }) {
-  return (
-    <p className='expanded_rating'>{rating} Stars</p>
-  )
-}
-
-function MovieComments ({ comments }) {
-  return (
-    <p className='expanded_comments'>{comments}</p>
-  )
 }
