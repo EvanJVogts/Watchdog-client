@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { Button, Input, Required } from '../Utility/Utility';
 import AuthApiService from '../../services/auth-api-service';
 import './NewUserForm.css';
 
@@ -31,8 +30,6 @@ export default class NewUserForm extends Component {
     .catch(res => {
       this.setState({ error: res.error })
     })
-    console.log('New user form submitted')
-    // console.log({ first_name, last_name, email, password })
   }
 
   render() {
