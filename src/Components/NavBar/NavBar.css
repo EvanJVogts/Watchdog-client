@@ -95,3 +95,35 @@ nav {
   font-size: 300%;
   font-family: 'Alfa Slab One', cursive;
 }
+
+.nav-addMovie-button {
+  position: fixed;
+  top: 0;
+  right:0;
+  margin: 0px 380px 15px 15px;
+  text-decoration: none;
+  color: #004DB3;
+  font-size: 150%;
+  padding: 18px 32px 18px 32px;
+  max-height: 8vh;
+}
+
+.nav-addMovie-button:hover {
+  color: #1E74E5;
+}
+
+.nav-homepage-button {
+  position: fixed;
+  top: 0;
+  right:0;
+  margin: 0px 180px 15px 15px;
+  text-decoration: none;
+  color: #004DB3;
+  font-size: 150%;
+  padding: 18px 32px 18px 32px;
+  max-height: 8vh;
+}
+
+.nav-homepage-button:hover {
+  color: #1E74E5;
+}

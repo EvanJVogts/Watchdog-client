@@ -37,6 +37,16 @@ export default class NavBar extends Component {
           className='nav-logout-button'>
             Logout
         </Link>
+        <Link
+          to='/home'
+          className='nav-homepage-button'>
+            Homepage
+        </Link>
+        <Link
+          to='/add'
+          className='nav-addMovie-button'>
+            + Movie
+        </Link>
       </div>
     )
   }
