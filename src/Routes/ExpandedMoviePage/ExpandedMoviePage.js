@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SingleMovieContext from '../../contexts/SingleMovieContext';
 import MovieApiService from '../../services/movie-api-service';
 import { Link } from 'react-router-dom'
+import Backarrow1 from '../../images/backarrow1.png';
 import './ExpandedMoviePage.css'
 
 export default class ExpandedMoviePage extends Component {
@@ -29,10 +30,6 @@ export default class ExpandedMoviePage extends Component {
     return <>
       <h2 className='expanded_title'>{movie.title}</h2>
       <fieldset className='expanded_movies_fieldset'>
-        <legend
-          className='expanded_movies_legend_title'>
-            Comments:
-        </legend>
         <MovieComments comments={movie.comments} />
       </fieldset>
       <MovieRating rating={movie.rating} />
@@ -42,27 +39,29 @@ export default class ExpandedMoviePage extends Component {
   render() {
     const { movie } = this.context
     return (
-      <main role="main">
+      <>
         <section className='expanded_render_section'>
           <div className='expanded_render'>
+            <Link to='/home'>
+              <img 
+                src={Backarrow1} 
+                alt='back arrow'
+                className='back-arrow1'/>
+            </Link>
             {this.renderMovie()}
-          </div>
-          <div className='expanded_buttons'>
-            <Link to='/home' 
-              className='expanded_movie_back_button'>
-                Back
-            </Link>
-            <Link to={`/edit/${movie.id}`} 
-              className='expanded_movie_edit_button'>
-                Edit
-            </Link>
-            <Link to={`/delete/${movie.id}`} 
-              className='expanded_movie_delete_button'>
-                Delete
-            </Link>
+            <div className='expanded_buttons'>
+              <Link to={`/edit/${movie.id}`} 
+                className='expanded_movie_edit_button'>
+                  Edit
+              </Link>
+              <Link to={`/delete/${movie.id}`} 
+                className='expanded_movie_delete_button'>
+                  Delete
+              </Link>
+            </div>
           </div>
         </section>
-      </main>
+      </>
     )
   }
 }

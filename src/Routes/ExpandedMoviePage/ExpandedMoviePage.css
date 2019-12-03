@@ -1,97 +1,70 @@
 .expanded_title {
   color: #F14938;
-  font-size: 200%;
+  font-size: 300%;
   padding-top: 0px;
-  margin-bottom: 60px;
-}
-
-.expanded_buttons {
-  margin-top: 5vh;
-  padding: 50px;
+  margin-bottom: 5%;
+  font-variant: small-caps;
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 4px;
 }
 
 .expanded_render {
-  background: #AFB7C2;
+  background: #F5F5F5;
   border: #4B6373 1px solid;
   box-shadow: 0px 0px 25px #4B6373;
-  padding: 80px;
-  margin: 0% 10% 0 10%;
+  padding: 5%;
+  margin: 2% 10% 2% 10%;
 }
 
 .expanded_render_section {
-  margin: 90px;
-  padding: 50px;
-}
-
-.expanded_rating {
-  margin-top: 40px;
+  padding: 10%;
+  background-color: #AFB7C2;
 }
 
 .expanded_comments {
   padding: 50px;
-}
-
-.expanded_movies_legend_title {
-  margin-left: 16px;
-  margin-right: 16px;
-  font-variant: small-caps;
+  color: #18100C;
 }
 
 .expanded_movies_fieldset {
-  border-width:10px;
+  border-width: 14px;
   padding-bottom: 0px;
-  margin-bottom: 90px;
-}
-
-.expanded_movie_back_button {
-  padding: 30px;
-  margin: 10px;
-  text-decoration: none;
-  color: #F5F5F5;
-  border: 2px solid #1961BF;
-  border-radius: 5%;
-  background: #566F8F;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  margin-bottom: 5%;
+  border-color: #586F8C;
 }
 
 .expanded_movie_edit_button {
-  padding: 30px;
-  margin: 10px;
+  padding: 12px;
+  margin: 0px 4% 0px 4%;
   text-decoration: none;
   color: #F5F5F5;
-  border: 2px solid #1961BF;
   border-radius: 5%;
-  background: #566F8F;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  background: #004DB3;
+  display: inline-block;
+  width: 30%;
+  max-width: 340px;
 }
 
 .expanded_movie_delete_button {
-  padding: 30px;
-  margin: 10px;
+  padding: 12px;
+  margin: 0px 4% 0px 4%;
   text-decoration: none;
   color: #F5F5F5;
-  border: 2px solid #1961BF;
   border-radius: 5%;
-  background: #566F8F;
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
-}
-
-.expanded_movie_back_button:hover {
-  color: #DBBD93;
-  border-color: #D6973C;
+  background: #004DB3;
+  display: inline-block;
+  width: 30%;
+  max-width: 340px;
 }
 
 .expanded_movie_edit_button:hover {
-  color: #DBBD93;
-  border-color: #D6973C;
+  color: #FFC861;
+  background-color: #1E74E5;
 }
 
 .expanded_movie_delete_button:hover {
-  color: #DBBD93;
-  border-color: #D6973C;
+  color: #FFC861;
+  background-color: #1E74E5;
 }
 
 .expanded_movies_legend_title:visited {
@@ -104,4 +77,22 @@
 
 .expanded_movie_delete_button:visited {
   text-decoration: none;
+}
+
+.expanded_buttons {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.back-arrow1 {
+  width: 5%;
+  position: absolute;
+  top: 16.5%;
+  left: 20%;
+  padding: 5px;
+}
+
+.back-arrow1:hover {
+  background: rgba(175, 183, 194, 0.466);
+  border-radius: 5%;
 }
