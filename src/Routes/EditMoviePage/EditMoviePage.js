@@ -31,6 +31,16 @@ export default class EditMoviePage extends Component {
       })
       .catch(this.context.setError)
   }
+
+  handleFavoriteCheckbox() {
+    const {movie} = this.context
+    if (movie.favorite === 'Favorite') {
+      return <input type='checkbox' name='newFavorite' id='newFavorite' className='edit-favorite-checkbox' value='Favorite' defaultChecked></input>
+    }
+    if (movie.favorite === '') {
+      return <input type='checkbox' name='newFavorite' id='newFavorite' className='edit-favorite-checkbox' value='Favorite'></input>
+    }
+  }
   
   renderEditMovie() {
     const {movie} = this.context
@@ -108,6 +118,7 @@ export default class EditMoviePage extends Component {
             className='edit_movie_rating'
             defaultValue={movie.rating}
             required>
+            <option value='0'>Haven't Watched Yet</option>
             <option value='1'>1 star</option>
             <option value='2'>2 star</option>
             <option value='3'>3 star</option>
@@ -117,11 +128,11 @@ export default class EditMoviePage extends Component {
         </div>
         <div>
           <label className='edit-favorite-label' htmlFor='newFavorite'>Favorite:</label>
-          <input type='checkbox' name='newFavorite' id='newFavorite' className='edit-favorite-checkbox'></input>
+          {this.handleFavoriteCheckbox()}
         </div>
         <div>
           <label className='edit-seen-label' htmlFor='newSeen'>Watched:</label>
-          <input type='checkbox' name='newSeen' id='newSeen' className='edit-seen-checkbox'></input>
+          <input type='checkbox' name='newSeen' id='newSeen' className='edit-seen-checkbox' value='Yes' unchecked-value='No'></input>
         </div>
         <button 
           type="submit"

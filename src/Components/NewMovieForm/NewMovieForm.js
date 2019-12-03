@@ -4,13 +4,27 @@ import MovieApiService from '../../services/movie-api-service';
 import './NewMovieForm.css';
 
 export default class NewMovieForm extends Component {
+  state = {
+    checkedFavorite: false,
+    checkedSeen: false
+  }
+
+  handleCheckFavorite = () => {
+    this.setState({checkedFavorite: true});
+  }
+
+  handleCheckSeen = () => {
+    this.setState({checkedSeen: true});
+  }
 
   static contextType = SingleMovieContext;
 
   handleSubmit = event => {
     event.preventDefault()
-    const { title, comments, rating, platform, favorite, seen } = event.target
-    MovieApiService.addNewMovie(title.value, rating.value, comments.value, platform.value, favorite.value, seen.value)
+    const { title, comments, rating, platform } = event.target
+    const favorite = this.state.checkedFavorite
+    const seen = this.state.checkedSeen
+    MovieApiService.addNewMovie(title.value, rating.value, comments.value, platform.value, favorite, seen)
       .then(this.context.addNewMovie)
       .then(() => {
         this.props.history.push('/home')
@@ -103,11 +117,11 @@ export default class NewMovieForm extends Component {
         </div>
         <div className='form-section'>
           <label className='new-favorite-label' htmlFor='favorite'>Favorite:</label>
-          <input type='checkbox' name='favorite' id='favorite' className='new-favorite-checkbox' value='Yes' unchecked-value='No'></input>
+          <input type='checkbox' name='favorite' id='favorite' className='new-favorite-checkbox' onChange={this.handleCheckFavorite} defaultChecked={this.state.checkedFavorite}/>
         </div>
         <div className='form-section'>
           <label className='new-seen-label' htmlFor='seen'>Watched:</label>
-          <input type='checkbox' name='seen' id='seen' className='new-seen-checkbox' value='Yes' unchecked-value='No'></input>
+          <input type='checkbox' name='seen' id='seen' className='new-seen-checkbox' onChange={this.handleCheckSeen} defaultChecked={this.state.checkedSeen}/>
         </div>
           <button 
             type="submit"
