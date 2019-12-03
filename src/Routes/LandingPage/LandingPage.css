@@ -177,6 +177,8 @@
     display: inline-block;
     width: 30%;
     max-width: 340px;
+    min-width: 100px;
+    font-size: 100%;
   }
   
   .Landing_Register_Button {
@@ -189,6 +191,8 @@
     display: inline-block;
     width: 30%;
     max-width: 340px;
+    min-width: 100px;
+    font-size: 100%;
   }
   
   .Landing_logged-in_Button {
@@ -201,6 +205,8 @@
     display: inline-block;
     width: 30%;
     max-width: 340px;
+    min-width: 100px;
+    font-size: 100%;
   }
   
   .Landing_Login_Button:hover {
