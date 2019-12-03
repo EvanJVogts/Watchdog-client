@@ -11,13 +11,13 @@
 .expanded_render {
   background: #F5F5F5;
   box-shadow: 0px 0px 25px #586F8C;
-  padding: 5%;
+  padding: 4%;
   margin: 2%;
 }
 
 .expanded_render_section {
   margin-top: 6vh;
-  padding: 6%;
+  padding: 4vh;
   background-color: #AFB7C2;
 }
 
@@ -92,7 +92,7 @@
 .expanded_back-arrow1 {
   width: 8%;
   position: absolute;
-  left: 14%;
+  left: 12%;
   padding: 5px;
 }
 
@@ -103,25 +103,16 @@
 
 @media only screen and (min-width: 1024px) {
   .expanded_title {
-    color: #F14938;
     font-size: 300%;
-    padding-top: 0px;
-    margin-bottom: 5%;
-    font-variant: small-caps;
-    font-family: 'Alfa Slab One', cursive;
-    letter-spacing: 4px;
   }
-  
+
   .expanded_render {
-    background: #F5F5F5;
-    box-shadow: 0px 0px 25px #586F8C;
-    padding: 5%;
+    padding: 4% 4% 1% 4%;
     margin: 2%;
   }
   
   .expanded_render_section {
-    padding: 10%;
-    background-color: #AFB7C2;
+    padding: 2vh 6vh 2vh 6vh;
   }
   
   .expanded_comments {
@@ -146,6 +137,7 @@
     display: inline-block;
     width: 30%;
     max-width: 340px;
+    font-size: 20px;
   }
   
   .expanded_movie_delete_button {
@@ -158,6 +150,7 @@
     display: inline-block;
     width: 30%;
     max-width: 340px;
+    font-size: 20px;
   }
   
   .expanded_movie_edit_button:hover {
@@ -188,9 +181,9 @@
   }
   
   .expanded_back-arrow1 {
-    width: 6%;
+    width: 5%;
     position: absolute;
-    left: 14%;
+    left: 12%;
     padding: 5px;
   }
   

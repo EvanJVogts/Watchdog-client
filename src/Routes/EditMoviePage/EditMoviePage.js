@@ -15,13 +15,16 @@ export default class EditMoviePage extends Component {
   handleSubmit = event => {
     const {movie} = this.context
     event.preventDefault()
-    const { newTitle, newRating, newComments } = event.target
-    MovieApiService.editMovie(newTitle.value, newComments.value, newRating.value, movie.id)
+    const { newTitle, newRating, newComments, newPlatform, newFavorite, newSeen } = event.target
+    MovieApiService.editMovie(newTitle.value, newComments.value, newRating.value, movie.id, newPlatform.value, newFavorite.value, newSeen.value)
       .then(() => {
         movie.id = ''
         newTitle.value = ''
         newComments.value = ''
         newRating.value = ''
+        newPlatform.value = ''
+        newFavorite.value = ''
+        newSeen.value = ''
       })
       .then(() => {
         this.props.history.push('/home')
@@ -65,6 +68,34 @@ export default class EditMoviePage extends Component {
           </textarea>
         </div>
         <div>
+          <label 
+            htmlFor='newPlatform'
+            className='edit_movie_platform_label'>
+              Media Platform: 
+          </label>
+          <select 
+            type='text'
+            id='newPlatform'
+            className='edit_movie_platform'
+            defaultValue={movie.platform}
+            required>
+            <option value='Netflix'>Netflix</option>
+            <option value='Hulu'>Hulu</option>
+            <option value='HBO'>HBO</option>
+            <option value='Showtime'>Showtime</option>
+            <option value='Starz'>Starz</option>
+            <option value='Disney+'>Disney+</option>
+            <option value='Amazon Prime'>Amazon Prime</option>
+            <option value='Sling TV'>SlingTV</option>
+            <option value='YouTube'>YouTube</option>
+            <option value='Cable Provider'>Cable</option>
+            <option value='Playstation Vue'>Playstation Vue</option>
+            <option value='Apple TV'>Apple TV</option>
+            <option value='CBS All Access'>CBS All Access</option>
+            <option value='Other'>Other</option>
+          </select>
+        </div>
+        <div>
           <label
             htmlFor='newRating'
             className='edit_movie_rating_label'>
@@ -83,6 +114,14 @@ export default class EditMoviePage extends Component {
             <option value='4'>4 star</option>
             <option value='5'>5 star</option>
           </select>
+        </div>
+        <div>
+          <label className='edit-favorite-label' htmlFor='newFavorite'>Favorite:</label>
+          <input type='checkbox' name='newFavorite' id='newFavorite' className='edit-favorite-checkbox'></input>
+        </div>
+        <div>
+          <label className='edit-seen-label' htmlFor='newSeen'>Watched:</label>
+          <input type='checkbox' name='newSeen' id='newSeen' className='edit-seen-checkbox'></input>
         </div>
         <button 
           type="submit"

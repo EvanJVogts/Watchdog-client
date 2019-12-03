@@ -34,10 +34,8 @@
 @media only screen and (min-width: 1024px) {
   .NewUser-title {
     margin-bottom: 10vh;
-    margin-top: 8vh;
+    margin-top: 6vh;
     font-size: 500%;
-    text-shadow: 7px 7px #18100C;
-    color: #F14938;
   }
   
   .NewUserPage {
@@ -46,21 +44,10 @@
   }
   
   .NewUserBox {
-    background: #F5F5F5;
     margin: 0% 5% 0% 5%;
-    padding: 2%;
   }
   
   .signup-form-title {
-    font-family: 'Gentium Book Basic', serif;
-    color: #F14938;
     font-size: 200%;
-    font-variant: small-caps;
-  }
-  
-  .signup-title-section {
-    background-color: #586F8C;
-    line-height: 0px;
-    padding: 1px;
   }
 }

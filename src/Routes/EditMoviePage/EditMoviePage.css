@@ -32,7 +32,7 @@
   border: none;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  max-width: 300px;
+  max-width: 340px;
 }
 
 .edit_movie_back_button {
@@ -47,7 +47,7 @@
   border: none;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
-  max-width: 300px;
+  max-width: 340px;
 }
 
 .edit_movie_submit_button:hover {
@@ -87,6 +87,22 @@
   color: #18100C;
   font-family: "Open Sans", sans-serif;
   font-size: 100%;
+}
+
+.edit_movie_platform {
+  margin: 0% 0% 5% 0%;
+  color: #18100C;
+  height: 5vh;
+  width: 80%;
+  font-size: 100%;
+}
+
+.edit_movie_platform_label {
+  display: block;
+  margin-bottom: 1%;
+  color: #18100C;
+  font-size: 120%;
+  font-family: 'Gentium Book Basic', serif;
 }
 
 .edit_movie_rating {

@@ -9,8 +9,8 @@ export default class NewMovieForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    const { title, comments, rating } = event.target
-    MovieApiService.addNewMovie(title.value, rating.value, comments.value)
+    const { title, comments, rating, platform, favorite, seen } = event.target
+    MovieApiService.addNewMovie(title.value, rating.value, comments.value, platform.value, favorite.value, seen.value)
       .then(this.context.addNewMovie)
       .then(() => {
         this.props.history.push('/home')
@@ -54,6 +54,35 @@ export default class NewMovieForm extends Component {
         </div>
         <div className='form-section'>
           <label 
+            htmlFor='platform'
+            className='new_movie_platform_label'>
+              Media Platform: 
+          </label>
+          <select 
+            type='text'
+            name='platform'
+            id='platform'
+            className='new_movie_platform'
+            defaultValue='Other'
+            required>
+            <option value='Netflix'>Netflix</option>
+            <option value='Hulu'>Hulu</option>
+            <option value='HBO'>HBO</option>
+            <option value='Showtime'>Showtime</option>
+            <option value='Starz'>Starz</option>
+            <option value='Disney+'>Disney+</option>
+            <option value='Amazon Prime'>Amazon Prime</option>
+            <option value='Sling TV'>SlingTV</option>
+            <option value='YouTube'>YouTube</option>
+            <option value='Cable Provider'>Cable</option>
+            <option value='Playstation Vue'>Playstation Vue</option>
+            <option value='Apple TV'>Apple TV</option>
+            <option value='CBS All Access'>CBS All Access</option>
+            <option value='Other'>Other</option>
+          </select>
+        </div>
+        <div className='form-section'>
+          <label 
             htmlFor='rating'
             className='new_movie_rating_label'>
               Movie rating: 
@@ -64,17 +93,22 @@ export default class NewMovieForm extends Component {
             id='rating'
             className='new_movie_rating'
             required>
-            <option value='1'>1 star</option>
-            <option value='2'>2 star</option>
-            <option value='3'>3 star</option>
-            <option value='4'>4 star</option>
-            <option value='5'>5 star</option>
+            <option value='0'>Haven't Watched Yet</option>
+            <option value='1'>1 Star</option>
+            <option value='2'>2 Star</option>
+            <option value='3'>3 Star</option>
+            <option value='4'>4 Star</option>
+            <option value='5'>5 Star</option>
           </select>
         </div>
-        {/* <div className='form-section'>
-          <label className='favorite-label' htmlFor='favorite'>Favorite:</label>
-          <input type='checkbox' name='favorite' className='favorite-checkbox'></input>
-        </div> */}
+        <div className='form-section'>
+          <label className='new-favorite-label' htmlFor='favorite'>Favorite:</label>
+          <input type='checkbox' name='favorite' id='favorite' className='new-favorite-checkbox'></input>
+        </div>
+        <div className='form-section'>
+          <label className='new-seen-label' htmlFor='seen'>Watched:</label>
+          <input type='checkbox' name='seen' id='seen' className='new-seen-checkbox'></input>
+        </div>
           <button 
             type="submit"
             className='new_movie_submit_button'>

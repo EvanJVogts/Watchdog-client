@@ -91,6 +91,14 @@ p {
   font-size: 100%;
 }
 
+.new_movie_platform {
+  margin: 0% 0% 5% 0%;
+  color: #18100C;
+  height: 5vh;
+  width: 80%;
+  font-size: 100%;
+}
+
 .new_movie_rating {
   margin: 0% 0% 5% 0%;
   color: #18100C;
@@ -123,6 +131,14 @@ p {
   font-family: 'Gentium Book Basic', serif;
 }
 
+.new_movie_platform_label {
+  display: block;
+  margin-bottom: 1%;
+  color: #18100C;
+  font-size: 120%;
+  font-family: 'Gentium Book Basic', serif;
+}
+
 @media only screen and (min-width: 1024px) {
   * {
     box-sizing: border-box;
@@ -142,11 +158,19 @@ p {
     text-align: center;
   }
   
-  .favorite-label {
+  .new-favorite-label {
     display: inline;
   }
   
-  .favorite-checkbox {
+  .new-favorite-checkbox {
+    display: inline;
+  }
+
+  .new-seen-label {
+    display: inline;
+  }
+  
+  .new-seen-checkbox {
     display: inline;
   }
   
@@ -214,14 +238,6 @@ p {
     width: 80%;
     color: #18100C;
     font-family: "Open Sans", sans-serif;
-    font-size: 100%;
-  }
-  
-  .new_movie_rating {
-    margin: 0% 0% 5% 0%;
-    color: #18100C;
-    height: 5vh;
-    width: 80%;
     font-size: 100%;
   }
   

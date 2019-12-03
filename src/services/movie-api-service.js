@@ -26,7 +26,7 @@ const MovieApiService = {
           : res.json()
       )
   },
-  addNewMovie(title, rating, comments, movieId) {
+  addNewMovie(title, rating, comments, movieId, platform, favorite, seen) {
     return fetch(`${config.API_ENDPOINT}/movies`, {
       method: 'POST',
       headers: {
@@ -38,6 +38,9 @@ const MovieApiService = {
         title: title,
         rating: rating,
         comments: comments,
+        platform: platform,
+        favorite: favorite,
+        seen: seen,
       }),
     })
     .then(res =>
@@ -46,7 +49,7 @@ const MovieApiService = {
         : res.json()
     )
   },
-  editMovie(newTitle, newComments, newRating, movieId) {
+  editMovie(newTitle, newComments, newRating, movieId, newPlatform, newFavorite, newSeen) {
     return fetch(`${config.API_ENDPOINT}/movies/${movieId}`, {
       method: 'PATCH',
       headers: {
@@ -58,6 +61,9 @@ const MovieApiService = {
         title: newTitle,
         rating: newRating,
         comments: newComments,
+        platform: newPlatform,
+        favorite: newFavorite,
+        seen: newSeen,
       }),
     })
     .then(res =>

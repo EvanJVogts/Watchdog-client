@@ -50,6 +50,7 @@
   border: none;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
+  max-width: 360px;
 }
 
 .login-submit-button:hover {
@@ -70,6 +71,7 @@
   border: none;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
+  max-width: 360px;
 }
 
 .login-back-button:hover {
@@ -86,11 +88,12 @@
   font-size: 70%;
   padding: 6px;
   background: #AFB7C2;
+  max-width: 360px;
 }
 
 .login-signup-link {
   display: block;
-  margin: 3% 5% 5% 5%;
+  margin: 2% 5% 1% 5%;
 }
 
 .login-signup-button:hover {
@@ -163,6 +166,7 @@
     border: none;
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
+    max-width: 360px;
   }
   
   .login-submit-button:hover {
@@ -183,6 +187,7 @@
     border: none;
     font-family: "Open Sans", sans-serif;
     font-size: 20px;
+    max-width: 360px;
   }
   
   .login-back-button:hover {
@@ -198,11 +203,6 @@
     font-size: 80%;
     padding: 6px;
     background: #AFB7C2;
-  }
-  
-  .login-signup-link {
-    display: block;
-    margin: 3% 5% 5% 5%;
   }
   
   .login-signup-button:hover {
