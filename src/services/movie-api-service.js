@@ -26,7 +26,7 @@ const MovieApiService = {
           : res.json()
       )
   },
-  addNewMovie(title, rating, comments, movieId, platform, favorite, seen) {
+  addNewMovie(title, rating, comments, platform, favorite, seen, movieId) {
     return fetch(`${config.API_ENDPOINT}/movies`, {
       method: 'POST',
       headers: {

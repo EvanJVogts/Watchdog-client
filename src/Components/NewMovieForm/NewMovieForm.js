@@ -103,11 +103,11 @@ export default class NewMovieForm extends Component {
         </div>
         <div className='form-section'>
           <label className='new-favorite-label' htmlFor='favorite'>Favorite:</label>
-          <input type='checkbox' name='favorite' id='favorite' className='new-favorite-checkbox'></input>
+          <input type='checkbox' name='favorite' id='favorite' className='new-favorite-checkbox' value='Yes' unchecked-value='No'></input>
         </div>
         <div className='form-section'>
           <label className='new-seen-label' htmlFor='seen'>Watched:</label>
-          <input type='checkbox' name='seen' id='seen' className='new-seen-checkbox'></input>
+          <input type='checkbox' name='seen' id='seen' className='new-seen-checkbox' value='Yes' unchecked-value='No'></input>
         </div>
           <button 
             type="submit"

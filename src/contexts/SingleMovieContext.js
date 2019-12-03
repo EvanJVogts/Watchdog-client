@@ -39,6 +39,10 @@ export class MovieProvider extends Component {
     this.setState({ rating })
   }
 
+  setPlatform = platform => {
+    this.setState({ platform })
+  }
+
   clearMovie = () => {
     this.setMovie(nullMovie)
   }
@@ -48,6 +52,9 @@ export class MovieProvider extends Component {
       movie: this.state.movie,
       rating: this.state.rating,
       comments: this.state.comments,
+      platform: this.state.platform,
+      favorite: this.state.favorite,
+      seen: this.state.seen,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
