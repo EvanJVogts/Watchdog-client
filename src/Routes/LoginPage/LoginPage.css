@@ -1,20 +1,31 @@
 .login-title {
-  margin-bottom: 20vh;
-  margin-top: 8vh;
-  font-size: 300%;
+  margin-bottom: 10vh;
+  margin-top: 6vh;
+  font-size: 500%;
   text-shadow: 7px 7px #18100C;
   color: #F14938;
 }
 
 .login-slogan {
-  margin-bottom: 2vh;
-  display: block;
   font-family: 'Gentium Book Basic', serif;
-  font-weight: bold;
+  color: #F14938;
+  font-size: 200%;
+  font-variant: small-caps;
 }
 
-.login-form-section {
-  padding: 60px 80px 60px 80px;
-  background: #afb7c2;
-  margin: 0% 10% 10% 10%;
+.login-page {
+  background-color:#AFB7C2;
+  padding: 2% 4% 2% 4%;
+}
+
+.login-title-section {
+  background-color: #586F8C;
+  line-height: 0px;
+  padding: 1px;
+}
+
+.login-box {
+  background: #F5F5F5;
+  margin: 0% 5% 0% 5%;
+  padding: 2%;
 }

@@ -6,17 +6,19 @@ export default class LoginPage extends Component {
   render() {
     return (
       <>
-        <header className='login-title'>
-          <h1>WatchDog</h1>
-        </header>
-        <div className='login-slogan'>
-          <h2>
-              Log into an existing account!
-          </h2>
-        </div>
-        <section className='login-form-section'>
-          <LoginForm 
-            history = {this.props.history}/>
+        <section className='login-title-section'>
+          <header className='login-title'>
+            <h1>WatchDog</h1>
+          </header>
+        </section>
+        <section className='login-page'>
+          <div className='login-box'>
+            <h2 className='login-slogan'>
+                Log into an existing account!
+            </h2>
+            <LoginForm 
+              history = {this.props.history}/>
+          </div>
         </section>
     </>
     )

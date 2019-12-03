@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import TokenService from '../../services/token-service';
 import AuthApiService from '../../services/auth-api-service';
-// import { Button, Input } from '../Utility/Utility';
 import { Link } from 'react-router-dom';
 import UserContext from '../../contexts/UserContext';
 import './LoginForm.css';
@@ -44,7 +43,7 @@ export default class NewUserForm extends Component {
         <div role='alert'>
           {error && <p className='error'>Something went wrong!</p>}
         </div>
-          <div className='login-email-input'>
+          <div>
             <label 
               htmlFor="LoginForm_email"
               className='login-email-input_label'>
@@ -54,10 +53,11 @@ export default class NewUserForm extends Component {
               type="email" 
               name='email' 
               id='LoginForm_email'
+              className='login-email-input'
               required>
             </input>
           </div>
-          <div className='login-password-input'>
+          <div>
             <label 
               htmlFor="LoginForm_password"
               className='login-password-input_label'>
@@ -67,6 +67,7 @@ export default class NewUserForm extends Component {
               type='password'
               name='password' 
               id='LoginForm_password' 
+              className='login-password-input'
               required>
             </input>
           </div>
@@ -76,15 +77,19 @@ export default class NewUserForm extends Component {
             Login
         </button>
         <Link 
-          to='/'
-          className='login-back-button'>
-            Back
+          to='/'>
+            <button 
+              className='login-back-button'>
+                Back
+            </button>
         </Link>
         <Link
           to='/register'
-          className='login-register-button'
-          >
-            New user?
+          className='login-signup-link'>
+            <button 
+              className='login-signup-button'>
+                New user?
+            </button>
         </Link>
       </form>
     )
