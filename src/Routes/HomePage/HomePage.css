@@ -1,6 +1,6 @@
 .homepage_title {
-  margin-bottom: 3vh;
-  margin-top: 4vh;
+  margin-bottom: 4vh;
+  margin-top: 5vh;
   font-size: 380%;
   text-shadow: 7px 7px #18100C;
   color: #F14938;
@@ -52,10 +52,10 @@ ul {
 
 .homepage_all_movies {
   background: #F5F5F5;
+  box-shadow: 0px 0px 25px #586F8C;
   padding: 2% 6% 6% 6%;
   margin: 0% 10% 0% 10%;
   border: none;
-  border-radius: 1%;
 }
 
 .all_movies_legend_title {

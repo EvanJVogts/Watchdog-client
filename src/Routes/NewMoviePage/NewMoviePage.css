@@ -1,16 +1,30 @@
 .new_movie_page_title {
   color: #F14938;
   font-size: 200%;
-  padding-top: 60px;
-  margin-bottom: 80px;
   text-shadow: 4px 4px #18100C;
+  background: #586F8C;
 }
 
 .new_movie_section {
-  background: #AFB7C2;
-  border: #4B6373 1px solid;
-  box-shadow: 0px 0px 25px #4B6373;
-  /* padding: 60px 80px 60px 80px; */
-  padding: 4% 10% 4% 10%;
-  margin: 0 10% 10% 10%;
+  padding: 6%;
+  background-color: #F5F5F5;
+}
+
+.newMovie_back-arrow1 {
+  width: 6%;
+  position: absolute;
+  left: 12%;
+  padding: 5px;
+}
+
+.newMovie_back-arrow1:hover {
+  background: rgba(175, 183, 194, 0.466);
+  border-radius: 5%;
+}
+
+.new_movie_render {
+  background: #F5F5F5;
+  box-shadow: 0px 0px 25px #586F8C;
+  padding: 5%;
+  margin: 2%;
 }

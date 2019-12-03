@@ -46,7 +46,7 @@ export default class ExpandedMoviePage extends Component {
               <img 
                 src={Backarrow1} 
                 alt='back arrow'
-                className='back-arrow1'/>
+                className='expanded_back-arrow1'/>
             </Link>
             {this.renderMovie()}
             <div className='expanded_buttons'>

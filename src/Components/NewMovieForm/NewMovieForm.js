@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import SingleMovieContext from '../../contexts/SingleMovieContext';
 import MovieApiService from '../../services/movie-api-service';
-import { Link } from 'react-router-dom';
-// import { Button } from '../Utility/Utility';
 import './NewMovieForm.css';
 
 export default class NewMovieForm extends Component {
@@ -87,7 +85,6 @@ export default class NewMovieForm extends Component {
             className='new_movie_reset_button'>
               Reset
           </button>
-          <Link to='/home' className='new_movie_back_button'>Back</Link>
       </form>
     )
   }
