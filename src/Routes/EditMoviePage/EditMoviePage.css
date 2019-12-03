@@ -32,6 +32,7 @@
   border: none;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
+  max-width: 300px;
 }
 
 .edit_movie_back_button {
@@ -46,6 +47,7 @@
   border: none;
   font-family: "Open Sans", sans-serif;
   font-size: 20px;
+  max-width: 300px;
 }
 
 .edit_movie_submit_button:hover {

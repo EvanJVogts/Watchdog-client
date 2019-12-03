@@ -14,7 +14,7 @@ export default class LoginPage extends Component {
         <section className='login-page'>
           <div className='login-box'>
             <h2 className='login-slogan'>
-                Log into an existing account!
+                log into an existing account
             </h2>
             <LoginForm 
               history = {this.props.history}/>

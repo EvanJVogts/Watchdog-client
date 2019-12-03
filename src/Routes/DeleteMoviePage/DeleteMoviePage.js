@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import SingleMovieContext from '../../contexts/SingleMovieContext';
 import MovieApiService from '../../services/movie-api-service'
-// import { Button } from '../../components/Utility/Utility';
 import { Link } from 'react-router-dom'
+import './DeleteMoviePage.css'
 
 export default class EditMoviePage extends Component {
 
@@ -20,15 +20,17 @@ export default class EditMoviePage extends Component {
     const {movie} = this.context
     return <>
         <button 
-          className='Button'
+          className='delete_yes'
           onClick={() => {
             MovieApiService.deleteMovie(movie.id)
             .then(() => {this.nextPath('/home')}) 
           }}>
             Yes
         </button>
-        <Link to={`/movie/${movie.id}`} className='Button'>
-          No
+        <Link to={`/movie/${movie.id}`}>
+          <button className='delete_no'>
+            No
+          </button>
         </Link>
     </>
   }
@@ -36,10 +38,12 @@ export default class EditMoviePage extends Component {
   render() {
     const { movie } = this.context
     return (
-      <main>
-        <h1> Are you sure you want to delete {movie.title} from your list? </h1>
-        <section>{this.renderDeleteMovie()}</section>
-      </main>
+      <>
+        <section className='delete_movie_page'>
+          <h1> Are you sure you want to delete {movie.title} from your list? </h1>
+          <section>{this.renderDeleteMovie()}</section>
+        </section>
+      </>
     )
   }
 }

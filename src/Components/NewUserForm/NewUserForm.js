@@ -21,16 +21,16 @@ export default class NewUserForm extends Component {
       email: email.value,
       password: password.value,
     })
-      .then(user => {
-        first_name.value = ''
-        last_name.value = ''
-        email.value = ''
-        password.value = ''
-        this.props.onRegistrationSuccess()
-      })
-      .catch(res => {
-        this.setState({ error: res.error })
-      })
+    .then(user => {
+      first_name.value = ''
+      last_name.value = ''
+      email.value = ''
+      password.value = ''
+      this.props.onRegistrationSuccess()
+    })
+    .catch(res => {
+      this.setState({ error: res.error })
+    })
     console.log('New user form submitted')
     // console.log({ first_name, last_name, email, password })
   }

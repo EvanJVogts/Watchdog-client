@@ -1,0 +1,54 @@
+.delete_movie_page {
+  margin-top: 15vh;
+  color: #F14938;
+}
+
+.delete_yes {
+  padding: 12px;
+  margin: 5% 2% 0px 2%;
+  text-decoration: none;
+  color:#F5F5F5;
+  border-radius: 5%;
+  background: #004DB3;
+  display: inline-block;
+  width: 30%;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  max-width: 300px;
+}
+
+.delete_no {
+  padding: 12px;
+  margin: 5% 2% 0px 2%;
+  text-decoration: none;
+  color:#F5F5F5;
+  border-radius: 5%;
+  background: #004DB3;
+  display: inline-block;
+  width: 30%;
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  max-width: 300px;
+}
+
+.delete_yes:hover {
+  color: #FFC861;
+  background-color: #1E74E5;
+  cursor: pointer;
+}
+
+.delete_no:hover {
+  color: #FFC861;
+  background-color: #1E74E5;
+  cursor: pointer;
+}
+
+.delete_yes:visited {
+  text-decoration: none;
+}
+
+.delete_no:visited {
+  text-decoration: none;
+}
