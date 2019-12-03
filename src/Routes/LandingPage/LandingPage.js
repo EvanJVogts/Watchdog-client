@@ -78,7 +78,10 @@ export default class LandingPage extends Component {
         </div>
       </section>
       <section className='demo-info'>
-        <p>If you want to try out WatchDog before signing up, feel free to log into the demo account using the email: TestEmail@gmail.com and password: Test12345! </p>
+        <p>
+            If you want to try out WatchDog before signing up, feel free to log into the 
+            demo account using the email: TestEmail@gmail.com and password: Test12345! 
+        </p>
       </section>
     </>
     )

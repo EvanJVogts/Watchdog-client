@@ -1,15 +1,16 @@
 .movieList {
-  color: #566F8F;
+  color: #F5F5F5;
   text-decoration: none;
 }
 
 .movieListItem {
-  background: #F5F5F5;
+  background: #586F8C;
   border: 1px solid #4B6373;
+  border-bottom-width: 6px;
+  border-bottom-color: #004DB3;
 }
 
 .movieListItem:hover {
-  border: 1px solid #D6973C;
-  color: #D6973C;
-  box-shadow: 0px 0px 15px #4B6373;
+  color: #FFC861;
+  box-shadow: 0px 0px 15px #F29E00;
 }

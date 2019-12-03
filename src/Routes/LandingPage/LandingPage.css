@@ -10,35 +10,38 @@
 
 .Landing_Login_Button {
   padding: 12px;
-  margin: 0px 80px 0px 80px;
+  margin: 0px 4% 0px 4%;
   text-decoration: none;
   color:#F5F5F5;
   border-radius: 5%;
   background: #004DB3;
   display: inline-block;
-  width: 340px;
+  width: 30%;
+  max-width: 340px;
 }
 
 .Landing_Register_Button {
   padding: 12px;
-  margin: 0px 80px 0px 80px;
+  margin: 0px 4% 0px 4%;
   text-decoration: none;
   color: #F5F5F5;
   border-radius: 5%;
   background: #004DB3;
   display: inline-block;
-  width: 340px;
+  width: 30%;
+  max-width: 340px;
 }
 
 .Landing_logged-in_Button {
   padding: 12px;
-  margin: 0px 30px 0px 30px;
+  margin: 0px 4% 0px 4%;
   text-decoration: none;
   color: #F5F5F5;
   border-radius: 5%;
   background: #004DB3;
   display: inline-block;
-  width: 340px;
+  width: 30%;
+  max-width: 340px;
 }
 
 .Landing_Login_Button:hover {
@@ -77,6 +80,11 @@
   font-family: 'Alfa Slab One', cursive;
 }
 
+.landing-title-section {
+  background-color: #586F8C;
+  line-height: 0px;
+}
+
 .landing-title-text{
   margin-top: 12vh;
 }
@@ -94,15 +102,15 @@
 .landing-description {
   margin-bottom: 0vh;
   padding-top: 4vh;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
   font-family: 'Gentium Book Basic', serif;
   color: #18100C;
   font-size: 110%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 60px;
+  grid-column-gap: 5%;
   grid-row-gap: 0px;
   max-height: 400px;
 }
@@ -118,11 +126,6 @@
 
 .landing-buttons {
   padding: 40px;
-}
-
-.landing-title-section {
-  background-color: #586F8C;
-  line-height: 0px;
 }
 
 .landing-photo {
@@ -157,4 +160,11 @@
 
 .c3r2 {
   grid-area: 2 / 3 / 3 / 4;
+}
+
+.demo-info {
+  padding: 2% 0% 2% 0%;
+  margin: 0% 0% 0% 0%;
+  margin-left: 12%;
+  margin-right: 12%;
 }

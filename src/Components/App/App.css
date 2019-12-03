@@ -18,8 +18,3 @@ header {
   font-family: 'Alfa Slab One', cursive;
   letter-spacing: 2px;
 }
-
-p {
-  margin: 0 auto;
-  max-width: 650px;
-}

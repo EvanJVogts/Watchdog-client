@@ -27,26 +27,31 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <main role="main">
-      <header className='homepage_title'>
-        <h1>Homepage</h1>
-      </header>
-      {/* <section>
-        <h2>My Favorite Movies</h2>
-        <p>[List of favorite movies]</p>
-      </section> */}
-      <section className='homepage_all_movie_section'>
-        <fieldset className='all_movies_fieldset'>
-          <legend className='all_movies_legend'>
-            <h2 className='all_movies_legend_title'> All my movies </h2>
-          </legend>
-          <ul className="movieList">
-            {this.renderMovies()}
-          </ul>
-        </fieldset>
-        <Link to='/add' className='add_new_movie_button'>Add new movie!</Link>
-      </section>
-    </main>
+      <>
+        <section className='homepage_title-section'>
+          <header className='homepage_title'>
+            <h1 className='homepage_title-text'>Homepage</h1>
+          </header>
+        </section>
+        {/* <section>
+          <h2>My Favorite Movies</h2>
+          <p>[List of favorite movies]</p>
+        </section> */}
+        <section className='homepage_all_movie_section'>
+          <div className='homepage_all_movies'>
+            <fieldset className='all_movies_fieldset'>
+            <legend className='all_movies_legend'>
+              <h2 className='all_movies_legend_title'> All my movies </h2>
+            </legend>
+            <ul className="movieList">
+              {this.renderMovies()}
+            </ul>
+          </fieldset>
+          <Link to='/add' className='add_new_movie_button'>Add new movie!</Link>
+          </div>
+
+        </section>
+      </>
     )
   }
 }
