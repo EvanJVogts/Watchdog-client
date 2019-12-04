@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import AuthApiService from '../../services/auth-api-service';
+import UserContext from '../../contexts/UserContext';
+import TokenService from '../../services/token-service';
 import './NewUserForm.css';
 
 export default class NewUserForm extends Component {
@@ -8,24 +10,36 @@ export default class NewUserForm extends Component {
     onRegistrationSuccess: () => {}
   }
 
+  static contextType = UserContext;
+
   state = { error: null }
 
   handleSubmit = e => {
     e.preventDefault()
     const { first_name, last_name, email, password } = e.target
+    const userName = email.value
     this.setState({ error: null })
+    console.log('test')
     AuthApiService.postUser({
       first_name: first_name.value,
       last_name: last_name.value,
       email: email.value,
       password: password.value,
     })
-    .then(user => {
-      first_name.value = ''
-      last_name.value = ''
+    .then(() => {
+      console.log('test then')
+      return AuthApiService.postLogin({
+        email: email.value,
+        password: password.value
+      })
+    })
+    .then(res => {
+      console.log('test then 2')
       email.value = ''
       password.value = ''
-      this.props.onRegistrationSuccess()
+      TokenService.saveAuthToken(res.authToken)
+      this.context.setLoggedIn(userName)
+      this.props.onRegistrationSuccess();
     })
     .catch(res => {
       this.setState({ error: res.error })

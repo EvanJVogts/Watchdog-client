@@ -14,14 +14,26 @@ export default class HomePage extends Component {
     MovieApiService.getMovies()
       .then(this.context.setMovieList)
       .catch(this.context.setError)
+    MovieApiService.getFavoriteMovies()
+      .then(this.context.setFavoriteMovieList)
+      .catch(this.context.setError)
   }
-    renderMovies() {
-    const { movieList = [] } = this.context
+  renderMovies() {
+  const { movieList = [] } = this.context
     return movieList.map(movie =>
       <MovieListItem
         key={movie.id}
         movie={movie}
         />
+    )
+  }
+  renderFavoriteMovies() {
+    const { favoriteMovieList = [] } = this.context
+    return favoriteMovieList.map(movie => 
+      <MovieListItem
+        key={movie.id}
+        movie={movie}
+      />
     )
   }
 
@@ -33,10 +45,10 @@ export default class HomePage extends Component {
             <h1 className='homepage_title-text'>Homepage</h1>
           </header>
         </section>
-        {/* <section>
+        <section>
           <h2>My Favorite Movies</h2>
-          <p>[List of favorite movies]</p>
-        </section> */}
+          {this.renderFavoriteMovies()}
+        </section>
         <section className='homepage_all_movie_section'>
           <div className='homepage_all_movies'>
             <fieldset className='all_movies_fieldset'>

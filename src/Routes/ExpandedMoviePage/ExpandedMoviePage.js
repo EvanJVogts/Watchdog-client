@@ -30,17 +30,17 @@ function MovieComments ({ comments }) {
   )
 }
 
-function MovieFavorite ({ favorite }) {
-  if (favorite === true) {
-    return (
-      <p>This movie is one of your favorites!</p>
-    )
-  } else {
-    return (
-      <p></p>
-    )
-  }
-}
+// function MovieFavorite ({ favorite }) {
+//   if (favorite === true) {
+//     return (
+//       <p>This movie is one of your favorites!</p>
+//     )
+//   } else {
+//     return (
+//       <p></p>
+//     )
+//   }
+// }
 
 // function MovieSeen ({ seen }) {
 //   if (seen === true) {
@@ -143,7 +143,7 @@ export default class ExpandedMoviePage extends Component {
       <fieldset className='expanded_movies_fieldset'>
         <MovieComments comments={movie.comments} />
       </fieldset>
-      <MovieFavorite favorite={movie.favorite} />
+      {/* <MovieFavorite favorite={movie.favorite} /> */}
       <MovieRating rating={movie.rating} />
     </>
   }

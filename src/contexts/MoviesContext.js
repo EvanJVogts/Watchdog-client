@@ -5,9 +5,8 @@ const MoviesContext = React.createContext({
   error: null,
   setError: () => {},
   clearError: () => {},
-  setMovieList: (moviesList) => {
-    this.movies = moviesList;
-  },
+  setMovieList: (moviesList) => {},
+  setFavoriteMovieList: (favoriteMovieList) => {}
 })
 export default MoviesContext
 
@@ -19,6 +18,9 @@ export class MovieListProvider extends Component {
   setMovieList = movieList => {
     this.setState({ movieList })
   }
+  setFavoriteMovieList = favoriteMovieList => {
+    this.setState({ favoriteMovieList })
+  }
   setError = error => {
     this.setState({ error })
   }
@@ -28,10 +30,12 @@ export class MovieListProvider extends Component {
   render() {
     const value = {
       movieList: this.state.movieList,
+      favoriteMovieList: this.state.favoriteMovieList,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setMovieList: this.setMovieList,
+      setFavoriteMovieList: this.setFavoriteMovieList,
     }
     return (
       <MoviesContext.Provider value={value}>

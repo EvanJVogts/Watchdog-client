@@ -11,7 +11,7 @@ export default class NewUserPage extends Component {
 
   handleRegistrationSucess = user => {
     const { history } = this.props
-    history.push('/login')
+    history.push('/home')
   }
 
   render() {
