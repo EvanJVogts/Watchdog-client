@@ -14,6 +14,18 @@ const MovieApiService = {
           : res.json()
       )
   },
+  getFavoriteMovies() {
+    return fetch(`${config.API_ENDPOINT}/movies/favorites`, {
+      headers: {
+        'Authorization': `bearer ${TokenService.getAuthToken()}`,
+      },
+    })
+      .then(res =>
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json()
+      )
+  },
   getMovie(movieId) {
     return fetch(`${config.API_ENDPOINT}/movies/${movieId}`, {
       headers: {

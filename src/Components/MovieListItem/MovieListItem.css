@@ -8,6 +8,7 @@
   border: 1px solid #4B6373;
   border-bottom-width: 6px;
   border-bottom-color: #004DB3;
+  font-size: 90%;
 }
 
 .movieListItem:hover {
@@ -16,8 +17,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .movieListItem:hover {
-    color: #FFC861;
-    box-shadow: 0px 0px 15px #F29E00;
+  .movieListItem {
+    font-size: 140%;
   }
 }

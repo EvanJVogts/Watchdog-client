@@ -1,18 +1,22 @@
 .expanded_title {
   color: #F14938;
-  font-size: 100%;
+  font-size: 120%;
   padding-top: 0px;
   margin-bottom: 5%;
   font-variant: small-caps;
   font-family: 'Alfa Slab One', cursive;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
+}
+
+.platform-logo {
+  width: 20%;
 }
 
 .expanded_render {
   background: #F5F5F5;
   box-shadow: 0px 0px 25px #586F8C;
   padding: 4%;
-  margin: 2%;
+  margin: 12% 2% 2% 2%;
 }
 
 .expanded_render_section {

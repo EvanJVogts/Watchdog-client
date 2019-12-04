@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import SingleMovieContext from '../../contexts/SingleMovieContext';
 import MovieApiService from '../../services/movie-api-service';
 import { Link } from 'react-router-dom'
+import Applelogo from '../../images/apple-logo.png';
+import Cablelogo from '../../images/cable-logo.png';
+import Cbslogo from '../../images/cbs-logo.png';
+import Disneylogo from '../../images/disney-logo.png';
+import Hbologo from '../../images/hbo-logo.png';
+import Hululogo from '../../images/hulu-logo.png';
+import Netflixlogo from '../../images/netflix_logo.png';
+import Playstationlogo from '../../images/playstation-logo.png';
+import Primelogo from '../../images/prime_logo.png';
+import Showtimelogo from '../../images/showtime-logo.png';
+import Slinglogo from '../../images/sling-logo.png';
+import Starzlogo from '../../images/starz-logo.png';
+import Youtubelogo from '../../images/youtube-logo.png';
 import Backarrow1 from '../../images/backarrow1.png';
 import './ExpandedMoviePage.css'
 
@@ -29,14 +42,74 @@ function MovieFavorite ({ favorite }) {
   }
 }
 
-function MovieSeen ({ seen }) {
-  if (seen === true) {
+// function MovieSeen ({ seen }) {
+//   if (seen === true) {
+//     return (
+//       <p></p>
+//     )
+//   } else {
+//     return (
+//       <p>You haven't seen this movie yet.</p>
+//     )
+//   }
+// }
+
+function MoviePlatform ({ platform }) {
+  if (platform === 'Netflix') {
     return (
-      <p></p>
+      <img src={Netflixlogo} alt='Netflix logo' className='platform-logo'/>
+    )
+  } if (platform === 'Hulu') {
+    return (
+      <img src={Hululogo} alt='Hulu logo' className='platform-logo'/>
+    )
+  } if (platform === 'HBO') {
+    return (
+      <img src={Hbologo} alt='HBO logo' className='platform-logo'/>
+    )
+  } if (platform === 'Showtime') {
+    return (
+      <img src={Showtimelogo} alt='Showtime logo' className='platform-logo'/>
+    )
+  } if (platform === 'Starz') {
+    return (
+      <img src={Starzlogo} alt='Starz logo' className='platform-logo'/>
+    )
+  } if (platform === 'Disney+') {
+    return (
+      <img src={Disneylogo} alt='Disney plus logo' className='platform-logo'/>
+    )
+  } if (platform === 'Amazon Prime') {
+    return (
+      <img src={Primelogo} alt='Amazon Prime logo' className='platform-logo'/>
+    )
+  } if (platform === 'Sling TV') {
+    return (
+      <img src={Slinglogo} alt='Sling TV logo' className='platform-logo'/>
+    )
+  } if (platform === 'YouTube') {
+    return (
+      <img src={Youtubelogo} alt='YouTube logo' className='platform-logo'/>
+    )
+  } if (platform === 'Cable Provider') {
+    return (
+      <img src={Cablelogo} alt='Cable logo' className='platform-logo'/>
+    )
+  } if (platform === 'Playstation Vue') {
+    return (
+      <img src={Playstationlogo} alt='Playstation Vue logo' className='platform-logo'/>
+    )
+  } if (platform === 'Apple TV') {
+    return (
+      <img src={Applelogo} alt='Apple TV logo' className='platform-logo'/>
+    )
+  } if (platform === 'CBS All Access') {
+    return (
+      <img src={Cbslogo} alt='CBS All Access logo' className='platform-logo'/>
     )
   } else {
     return (
-      <p>You haven't seen this movie yet.</p>
+      <p className='platform-logo'></p>
     )
   }
 }
@@ -65,7 +138,8 @@ export default class ExpandedMoviePage extends Component {
     const {movie} = this.context
     return <>
       <h2 className='expanded_title'>{movie.title}</h2>
-      <MovieSeen seen={movie.seen} />
+      {/* <MovieSeen seen={movie.seen} /> */}
+      <MoviePlatform platform={movie.platform} />
       <fieldset className='expanded_movies_fieldset'>
         <MovieComments comments={movie.comments} />
       </fieldset>
