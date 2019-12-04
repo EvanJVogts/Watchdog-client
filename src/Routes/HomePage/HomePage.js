@@ -49,7 +49,6 @@ export default class HomePage extends Component {
           </fieldset>
           <Link to='/add' className='add_new_movie_button'>Add new movie!</Link>
           </div>
-
         </section>
       </>
     )

@@ -119,106 +119,35 @@
   }
   
   .login-email-input {
-    margin: 0% 0% 2% 0%;
-    text-align: center;
-    width: 70%;
     height: 50px;
-    color: #18100C;
-    font-family: "Open Sans", sans-serif;
     font-size: 100%;
   }
   
   .login-password-input {
-    margin: 0% 0% 2% 0%;
-    text-align: center;
-    width: 70%;
     height: 50px;
-    color: #18100C;
-    font-family: "Open Sans", sans-serif;
     font-size: 100%;
   }
   
   .login-email-input_label {
-    display: block;
     margin-bottom: 10px;
-    color: #18100C;
     font-size: 120%;
-    font-family: 'Gentium Book Basic', serif;
   }
   
   .login-password-input_label {
-    display: block;
     margin-bottom: 10px;
-    color: #18100C;
     font-size: 120%;
-    font-family: 'Gentium Book Basic', serif;
   }
   
   .login-submit-button {
-    padding: 12px;
-    margin: 5% 2% 0px 2%;
-    text-decoration: none;
-    color:#F5F5F5;
-    border-radius: 5%;
-    background: #004DB3;
-    display: inline-block;
-    width: 30%;
-    border: none;
-    font-family: "Open Sans", sans-serif;
     font-size: 20px;
-    max-width: 360px;
-  }
-  
-  .login-submit-button:hover {
-    color: #FFC861;
-    background-color: #1E74E5;
-    cursor: pointer;
   }
   
   .login-back-button {
-    padding: 12px;
-    margin: 5% 2% 0px 2%;
-    text-decoration: none;
-    color:#F5F5F5;
-    border-radius: 5%;
-    background: #004DB3;
-    display: inline-block;
-    width: 30%;
-    border: none;
-    font-family: "Open Sans", sans-serif;
     font-size: 20px;
-    max-width: 360px;
-  }
-  
-  .login-back-button:hover {
-    color: #FFC861;
-    background-color: #1E74E5;
-    cursor: pointer;
   }
   
   .login-signup-button {
-    text-decoration: none;
-    border: none;
     width: 30%;
     font-size: 80%;
-    padding: 6px;
-    background: #AFB7C2;
-  }
-  
-  .login-signup-button:hover {
-    color: #004DB3;
-    cursor: pointer;
-  }
-  
-  .login-submit-button:visited {
-    text-decoration: none;
-  }
-  
-  .login-back-button:visited {
-    text-decoration: none;
-  }
-  
-  .login-signup-button:visited {
-    text-decoration: none;
   }
 }

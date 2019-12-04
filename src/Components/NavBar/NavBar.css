@@ -129,134 +129,39 @@ nav {
 }
 
 @media only screen and (min-width: 1024px) {
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    padding: 1% 0;
-    background-color: #F5F5F5;
-    height: 8vh;
-    border-bottom: 1px solid #004DB3;
-  }
-  
   .nav-login-button {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 0px 0px 15px 15px;
-    text-decoration: none;
-    color: #F5F5F5;
-    font-variant: small-caps;
     font-size: 150%;
-    background: #004DB3;
     padding: 18px 32px 18px 32px;
     max-height: 8vh;
-  }
-  
-  .nav-login-button:hover {
-    color: #FFC861;
-    background: #1E74E5;
-  }
-  
-  .nav-login-button:visited {
-    text-decoration: none;
   }
   
   .nav-register-button {
-    position: fixed;
-    top: 0;
-    right:0;
     margin: 0px 160px 15px 15px;
-    text-decoration: none;
-    color: #004DB3;
-    font-variant: small-caps;
     font-size: 150%;
     padding: 18px 32px 18px 32px;
     max-height: 8vh;
-  }
-  
-  .nav-register-button:hover {
-    color: #1E74E5;
   }
   
   .nav-logout-button {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 0px 0px 15px 15px;
-    text-decoration: none;
-    color: #F5F5F5;
-    font-variant: small-caps;
     font-size: 150%;
-    background: #004DB3;
     padding: 18px 32px 18px 32px;
     max-height: 8vh;
-  }
-  
-  .nav-logout-button:hover {
-    color: #FFC861;
-    background: #1E74E5;
-  }
-  
-  .nav-logout-button:visited {
-    text-decoration: none;
-  }
-  
-  .nav_bar_logo {
-    height: 50px;
-    border-radius: 50%;
-    position: fixed;
-    top: 4px;
-    left: 8px;
   }
   
   .nav_bar_logo_text {
     height: 50px;
-    border-radius: 50%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    color:#004DB3;
     margin: 0px 0px 15px 15px;
-    padding: 12x 12px 12px 12px;
-    max-height: 8vh;
-    font-variant: small-caps;
     font-size: 300%;
-    font-family: 'Alfa Slab One', cursive;
   }
   
   .nav-addMovie-button {
-    position: fixed;
-    top: 0;
-    right:0;
-    margin: 0px 380px 15px 15px;
-    text-decoration: none;
-    color: #004DB3;
     font-size: 150%;
-    padding: 18px 32px 18px 32px;
-    max-height: 8vh;
     display: inline-block;
   }
   
-  .nav-addMovie-button:hover {
-    color: #1E74E5;
-  }
-  
   .nav-homepage-button {
-    position: fixed;
-    top: 0;
-    right:0;
     margin: 0px 180px 15px 15px;
-    text-decoration: none;
-    color: #004DB3;
     font-size: 150%;
     padding: 18px 32px 18px 32px;
-    max-height: 8vh;
-  }
-  
-  .nav-homepage-button:hover {
-    color: #1E74E5;
   }
 }

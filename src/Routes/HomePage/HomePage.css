@@ -1,3 +1,7 @@
+.background {
+  background: #AFB7C2;
+}
+
 .homepage_title {
   margin-bottom: 4vh;
   margin-top: 5vh;
@@ -77,12 +81,7 @@ ul {
 
 @media only screen and (min-width: 1024px) {
   .homepage_title {
-    margin-bottom: 4vh;
-    margin-top: 5vh;
     font-size: 380%;
-    text-shadow: 7px 7px #18100C;
-    color: #F14938;
-    font-family: 'Alfa Slab One', cursive;
   }
   
   .homepage_title-section {
